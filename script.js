@@ -13,7 +13,7 @@ window.onload = function () {
 
   // Create video element
   const video = document.createElement("video");
-  video.src = "video.mp4"; // make sure video.mp4 is in the same directory
+  video.src = "https://raw.githubusercontent.com/D3FaltXD/FireCompass-Landing/main/video.mp4";
   video.autoplay = true;
   video.loop = true;
   video.muted = true; // Required for autoplay in most browsers
