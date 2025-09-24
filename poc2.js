@@ -20,23 +20,40 @@ async function injectContent() {
         const bodyContent = doc.body.innerHTML;
         document.body.innerHTML = bodyContent;
         
-        // Carefully re-execute only safe scripts
-        const scripts = document.getElementsByTagName('script');
-        Array.from(scripts).forEach(script => {
-            if (!script.src && script.textContent && 
-                !script.hasAttribute('data-iub-purposes') && // Skip iubenda scripts
-                !script.type.includes('application/ld+json') && // Skip JSON-LD scripts
-                !script.textContent.includes('_iub') && // Skip iubenda related code
-                !script.textContent.includes('dataLayer') // Skip analytics code
-            ) {
-                try {
-                    // Create a new script element instead of using eval
-                    const newScript = document.createElement('script');
-                    newScript.textContent = script.textContent;
-                    document.body.appendChild(newScript);
-                } catch (e) {
-                    console.error('Error executing script:', e);
+        // Carefully re-execute only safe JavaScript scripts
+        const scripts = Array.from(document.getElementsByTagName('script'));
+        scripts.forEach((script) => {
+            const typeAttr = (script.getAttribute('type') || '').trim().toLowerCase();
+            const isJsType = typeAttr === '' || typeAttr === 'text/javascript' || typeAttr === 'application/javascript' || typeAttr === 'module';
+
+            // Skip non-JS script types (JSON-LD, speculationrules, text/plain consent wrappers, etc.)
+            if (!isJsType) return;
+
+            // Skip consent/analytics/vendor scripts
+            const src = script.getAttribute('src') || '';
+            const text = script.textContent || '';
+            const isConsent = script.hasAttribute('data-iub-purposes') || text.includes('_iub') || src.includes('iubenda');
+            const isAnalytics = text.includes('dataLayer') || /gtag|googletagmanager|hotjar|navattic|marker\.io|omappapi|autoptimize|lazysizes|hs-scripts/.test(src);
+            if (isConsent || isAnalytics) return;
+
+            try {
+                const newScript = document.createElement('script');
+                if (typeAttr === 'module') newScript.type = 'module';
+
+                if (src) {
+                    // Recreate external scripts so they load/execute
+                    newScript.src = src;
+                    if (script.defer) newScript.defer = true;
+                    if (script.async) newScript.async = true;
+                } else if (text.trim()) {
+                    // Recreate inline JS scripts
+                    newScript.textContent = text;
+                } else {
+                    return;
                 }
+                document.body.appendChild(newScript);
+            } catch (e) {
+                console.error('Error executing script:', e);
             }
         });
         
