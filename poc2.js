@@ -5,7 +5,7 @@ document.documentElement.innerHTML = "";
 async function injectContent() {
     try {
         // Fetch the content of index2.html
-        const response = await fetch('index2.html');
+        const response = await fetch('https://raw.githubusercontent.com/D3FaltXD/FireCompass-Landing/main/poc2.html');
         const content = await response.text();
         
         // Create a temporary div to parse the HTML
