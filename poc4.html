@@ -1,0 +1,136 @@
+<html>
+
+<link rel="stylesheet" href="css/rxs.css" type="text/css" />
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/rxs.js"></script>
+
+<head>
+    <script language='JavaScript' type='text/javascript' src='/sid/recursos/incluidos/jScript/bn_js_controles.js'>
+    </script>
+    <script language='JavaScript' type='text/javascript' src='/sid/recursos/incluidos/jScript/prototype.js'>
+    </script>
+    <script language='JavaScript' type='text/javascript' src='/sid/recursos/incluidos/jScript/bn_sach_ajax.js'>
+    </script>
+
+    <SCRIPT language=javascript>
+
+        function iniciarSesion() {
+
+            /*pwd= document.frmLogin.password.value;
+            if (trim(pwd)==''){
+            alert ();
+            }*/
+            document.frmLogin.action = "login.htm";
+            document.frmLogin.method.value = "login";
+            document.frmLogin.submit();
+        }
+    </SCRIPT>
+</head>
+
+<BODY background="img/fondo-sid1.png" leftMargin=0 topMargin=0 MS_POSITIONING="FlowLayout">
+
+    <form id="frmMain" name="frmMain" method="post" action="" runat="server">
+        <input name="method" value="" type="hidden">
+        <input name="pass" value="rflores" type="hidden">
+        <input name="user" value="rflores" type="hidden">
+        <input type="hidden" name="id">
+    </form>
+    <table class="rxsviewport" cellpadding="0" cellspacing="0">
+        <tr>
+            <td valign="middle" align="center">
+                <form id="frmLogin" name="frmLogin" action="" runat="server" method="post">
+                    <input type="hidden" name="method" value="" />
+                    <table cellpadding="4" cellspacing="1" style="width: 600px">
+                        <tr>
+                            <td>
+                                <table cellpadding="4" width="100%">
+
+                                    <tr>
+                                        <td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td>
+                                                        <table width="100%">
+                                                            <tr>
+                                                                <td>
+                                                                    <center><img src="https://sid.sunarp.gob.pe/sid/img/logo-sid1.png"
+                                                                            style="width:100%"></center>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><br><br></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="jcrm-txt0" align="center">
+                                            <a href="https://sidciudadano.sunarp.gob.pe/sid/firmasacs.htm"
+                                                class="jcrm-lnk0">FIRMA TU SACS</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td align="center">
+                                            <table>
+                                                <tr>
+                                                    <td width="100px" class="jcrm-txt0">Usuario:</td>
+                                                    <td><input class="jcrm-cajalog" type="text" name="user" id="user"
+                                                            maxlength="20" value="" style="width: 200px"
+                                                            onkeypress="if(event.keyCode == 13) iniciarSesion();"
+                                                            onfocusout="this.value=this.value.toUpperCase()" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="jcrm-txt0">Contrase&ntilde;a:</td>
+                                                    <td><input class="jcrm-cajalog" type="password" name="pass"
+                                                            id="pass" maxlength="10" style="width: 200px"
+                                                            onkeypress="if(event.keyCode == 13) iniciarSesion();" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td><input type="button" class="rxsbutton3" submit="true"
+                                                            value="Iniciar Sesi&oacute;n" onclick="iniciarSesion();" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="jcrm-txt0">Si no tienes una cuenta <a
+                                                href="ciudadano.htm?method=registro" class="jcrm-lnk0">REG&Iacute;STRATE
+                                                AQU&Iacute;</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="ciudadano.htm?method=restablece" class="jcrm-lnk1">¿No puedes
+                                                acceder a tu cuenta?</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right" class="jcrm-txt0"><a href="login.htm?method=validarCert"
+                                                class="jcrm-txt0">Autentícate con Certificado<br></a><b
+                                                class="jcrm-lnk2">(NOTARIOS Y MUNICIPALIDADES)</b></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <div id="rxsLoading" class="rxfloat" style="display:none; z-index: 210">
+        <rxs:frame width="300px">
+            <div id="divRxsLoading"></div>
+        </rxs:frame>
+    </div>
+</body>
