@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://mein-senec.de/auth/favicon.ico" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="https://mein-senec.de/auth/favicon.ico" />
+    <base href="https://mein-senec.de/auth">
+
+    <title>Login Portal</title>
+
+    <style>
+        @font-face {
+            font-family: "meinsenec-font";
+            src: url(https://mein-senec.de/fonts/OpenSans/OpenSans-Regular-webfont.eot?#iefix) format("embedded-opentype"), url(https://mein-senec.de/fonts/OpenSans/OpenSans-Regular-webfont.woff) format("woff"), url(https://mein-senec.de/fonts/OpenSans/OpenSans-Regular-webfont.ttf) format("truetype"), url(https://mein-senec.de/fonts/OpenSans/OpenSans-Regular-webfont.svg#open_sansregular) format("svg");
+        }
+
+        @font-face {
+            font-family: "meinsenec-font";
+            font-style: italic;
+            src: url(https://mein-senec.de/fonts/OpenSans/OpenSans-Italic-webfont.eot?#iefix) format("embedded-opentype"), url(https://mein-senec.de/fonts/OpenSans/OpenSans-Italic-webfont.woff) format("woff"), url(https://mein-senec.de/fonts/OpenSans/OpenSans-Italic-webfont.ttf) format("truetype"), url(https://mein-senec.de/fonts/OpenSans/OpenSans-Italic-webfont.svg#open_sansregular) format("svg");
+        }
+
+        @font-face {
+            font-family: "meinsenec-font";
+            font-weight: bold;
+            src: url(https://mein-senec.de/fonts/OpenSans/OpenSans-Bold-webfont.eot?#iefix) format("embedded-opentype"), url(https://mein-senec.de/fonts/OpenSans/OpenSans-Bold-webfont.woff) format("woff"), url(https://mein-senec.de/fonts/OpenSans/OpenSans-Bold-webfont.ttf) format("truetype"), url(https://mein-senec.de/fonts/OpenSans/OpenSans-Bold-webfont.svg#open_sansregular) format("svg");
+        }
+
+        @font-face {
+            font-family: "meinsenec-font";
+            font-weight: bold;
+            font-style: italic;
+            src: url(https://mein-senec.de/fonts/OpenSans/OpenSans-BoldItalic-webfont.eot?#iefix) format("embedded-opentype"), url(https://mein-senec.de/fonts/OpenSans/OpenSans-BoldItalic-webfont.woff) format("woff"), url(https://mein-senec.de/fonts/OpenSans/OpenSans-BoldItalic-webfont.ttf) format("truetype"), url(https://mein-senec.de/fonts/OpenSans/OpenSans-BoldItalic-webfont.svg#open_sansregular) format("svg");
+        }
+
+        @font-face {
+            font-family: "meinsenec-icon-font";
+            src: url(https://mein-senec.de/fonts/FontAwesome/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(https://mein-senec.de/fonts/FontAwesome/fontawesome-webfont.woff) format("woff"), url(https://mein-senec.de/fonts/FontAwesome/fontawesome-webfont.ttf) format("truetype"), url(https://mein-senec.de/fonts/FontAwesome/fontawesome-webfont.svg#open_sansregular) format("svg");
+        }
+
+        body {
+            font-family: "meinsenec-font", sans-serif;
+            color: #3c3c3c;
+        }
+
+
+        body .content-wrapper {
+            height: 600px;
+            width: 450px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        body .content-wrapper .title-area .logo {
+            margin-top: 20px;
+            width: 300px;
+            height: 70px;
+            margin-left: auto;
+            margin-right: auto;
+            background: url(https://mein-senec.de/img/senec-logo.svg) no-repeat center;
+        }
+
+        body .content-wrapper .title-area .logo-connection-icon {
+            padding: 20px;
+            height: 70px;
+            margin-left: auto;
+            margin-right: auto;
+            background: url(https://mein-senec.de/img/connection-icon.png) no-repeat center;
+            background-size: contain;
+        }
+
+        body .content-wrapper .title-area .logo-my-energy-key {
+            width: 300px;
+            height: 70px;
+            margin-left: auto;
+            margin-right: auto;
+            background: url(https://mein-senec.de/img/my-energy-key-logo-tall.png) no-repeat center;
+        }
+
+        body .content-wrapper .title-area .title-row {
+            text-align: center;
+            line-height: 28px;
+            color: #666;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        body .content-wrapper .content-area {
+            border-radius: 5px;
+            background: #fff;
+            padding-top: 50px;
+            border: 1px solid #fff;
+        }
+
+        body .content-wrapper .content-area .v-textfield {
+            border: 1px solid #e2e2e2;
+            padding-left: 35px;
+            height: 40px;
+            font-size: 18px;
+            border-radius: 5px;
+            padding-top: 3px;
+            color: #666;
+            background-color: #fff;
+        }
+
+        body .content-wrapper .content-area .email-wrapper {
+            margin-bottom: 5px;
+        }
+
+        body .content-wrapper .content-area .email {
+            background: #fff url(https://mein-senec.de/img/email.png) no-repeat 2px 10px;
+            padding-left: 35px;
+        }
+
+
+        body .content-wrapper .content-area .password {
+            background: #fff url(https://mein-senec.de/img/password.png) no-repeat 2px 10px;
+            padding-left: 35px;
+        }
+
+        body .content-wrapper .content-area .button,
+        body .content-wrapper .content-area button {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            height: 50px;
+            min-width: 200px;
+            font-size: 22px;
+            color: #fff;
+            background-color: #000099;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 30px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: transparent;
+            display: block;
+        }
+
+        body .content-wrapper .content-area .button-div {
+            vertical-align: middle;
+            text-decoration: none;
+        }
+
+        body .content-wrapper .content-area .button:hover,
+        body .content-wrapper .content-area button:hover {
+            background-color: #9c9c9c;
+        }
+
+        body .content-wrapper .content-area a {
+            text-decoration: none;
+        }
+
+        body .content-wrapper .content-area .message-wrapper {
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        body .content-wrapper .content-area .message-wrapper .message {
+            padding-left: 28px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        body .container.version {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 20px 0;
+        }
+
+        body .container.version .title-row {
+            text-align: center;
+            color: #999;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        body .container.version .status-text {
+            margin-top: 0px;
+            font-size: 12px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #000;
+        }
+
+        .separator:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        .separator:not(:empty)::after {
+            margin-left: .25em;
+        }
+
+        .secondary-button {
+            color: #000099 !important;
+            background-color: #fff !important;
+            border: 2px;
+            border-color: #000099 !important;
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        .secondary-link {
+            cursor: pointer;
+            font-size: 10px;
+            text-decoration: underline;
+            color: #666666;
+            margin-left: 20px;
+        }
+
+        body .content-wrapper .content-area .mek-button {
+            min-width: 140px;
+            font-size: 18px;
+            color: #000099;
+            background-color: #fff;
+            display: flex;
+            height: 35px;
+            padding-top: 18px;
+            padding-bottom: 17px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000099;
+            border-radius: 100px;
+        }
+
+        body .content-wrapper .content-area .mek-button:hover {
+            background-color: #9c9c9c;
+            border: 0;
+            color: white;
+        }
+
+        .xs-visible {
+            display: none;
+        }
+
+        #login {
+            width: 85%;
+        }
+
+        #password {
+            width: 85%;
+        }
+
+        #lostPasswordCancel {
+            min-width: 40%;
+            width: 45%;
+            float: left;
+            line-height: 50px;
+        }
+
+        #lostPasswordSend {
+            min-width: 40%;
+            width: 45%;
+            float: right;
+            line-height: 50px;
+        }
+
+        #mekButton {
+            width: 300px;
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (max-width: 992px) {
+            body .content-wrapper {
+                width: auto;
+
+            }
+
+            body .content-wrapper .title-area .login.logo {
+                float: right;
+                width: 200px;
+                height: 35px;
+            }
+
+            body .content-wrapper .content-area {
+                padding-left: 30px;
+                padding-right: 30px;
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                max-width: 400px;
+            }
+
+            body .content-wrapper .content-area .v-textfield {
+                height: 44px;
+                font-weight: bold;
+                padding-left: 16px;
+                margin-bottom: 16px;
+                /*Disable default borders*/
+                border: none;
+                border-bottom: rgb(178, 178, 178) solid 1px;
+                border-radius: 6px;
+                color: #009;
+            }
+
+            body .content-wrapper .content-area .v-textfield::placeholder {
+                color: rgb(178, 178, 178);
+            }
+
+
+            body .content-wrapper .content-area .email,
+            body .content-wrapper .content-area .password {
+                background: #F9F9FA;
+            }
+
+            .content-wrapper .content-area button {
+                margin-top: 30px;
+                min-width: 184px;
+            }
+
+            body .content-wrapper .content-area .login.my-energy-key-login {
+                position: relative;
+            }
+
+            .show-password {
+                width: 24px;
+                height: 24px;
+                float: right;
+                margin-left: -40px;
+                margin-right: 10px;
+                margin-top: 14px;
+                position: relative;
+            }
+
+            body footer {
+                position: relative;
+            }
+
+            .app-forgot-password {
+                float: right;
+            }
+
+            .xs-visible {
+                display: block;
+            }
+
+            .xs-left {
+                float: left;
+                margin-left: 40px;
+            }
+
+            .xs-right {
+                float: right;
+                margin-right: 40px;
+            }
+
+            .xl-visible {
+                display: none;
+            }
+
+            .button-div-white {
+                background-color: white;
+                color: #000099;
+                line-height: 42px;
+                vertical-align: middle;
+                text-decoration: none;
+            }
+
+            .button-div {
+                color: #fff;
+                background-color: #000099;
+            }
+
+            h3 {
+                float: left;
+                margin: 0;
+            }
+
+            h6 {
+                float: left;
+                font-weight: normal;
+                font-size: 16px;
+                text-align: left;
+                margin-top: 10px;
+            }
+
+            body .content-wrapper .content-area .message-wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            body .content-wrapper .content-area .message-wrapper .message {
+                padding-left: 28px;
+                padding-top: 5px;
+                text-align: center;
+            }
+
+            #login {
+                width: calc(100% - 20px);
+            }
+
+            #password {
+                width: calc(100% - 20px);
+            }
+
+            #loginButton {
+                font-size: 16px;
+
+            }
+
+            #lostPasswordCancel {
+                border: #000099 solid 2px;
+                background: white;
+                color: #000099;
+                font-size: 16px;
+                min-width: 40%;
+                width: 45%;
+                float: left;
+                line-height: 50px;
+            }
+
+            #lostPasswordSend {
+                font-size: 16px;
+                min-width: 40%;
+                width: 45%;
+                float: right;
+                line-height: 50px;
+            }
+
+            #mekButton {
+                width: 260px;
+                font-size: 16px;
+            }
+
+            @media screen and (orientation: portrait) {
+                body .content-wrapper {
+                    height: 75vh;
+                }
+
+                .content-area {
+                    bottom: min(calc(75vh - 400px), 0px);
+                }
+
+                .login.logo {
+                    margin-top: 20px;
+                }
+
+                body .container.version {
+                    bottom: min(calc(75vh - 400px), 0px);
+                    margin: 20px 0;
+                }
+            }
+
+            @media screen and (orientation: landscape) {
+                body .content-wrapper {
+                    height: 90vh;
+                }
+
+                .content-area {
+                    scale: 0.7;
+                    bottom: min(calc(90vh - 400px), 0px);
+                }
+
+                .login.logo {
+                    margin-top: 0;
+                }
+
+                body .container.version {
+                    bottom: min(calc(90vh - 400px), 0px);
+                    margin: 20px 0;
+                }
+            }
+
+            .login.my-energy-key-login {
+                height: 100px;
+            }
+
+            body .content-wrapper .content-area {
+                padding-top: 0;
+            }
+        }
+
+        .poc-banner {
+            background-color: #000099;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="poc-banner">Firecompass POC</div>
+
+    <script type="text/javascript" defer>
+
+        function sendPwMode() {
+            document.getElementById("loginContainer").style.display = "none";
+            document.getElementById("sendPwContainer").style.display = "block";
+            document.getElementById("emailSentContainer").style.display = "none";
+        }
+
+        function loginMode() {
+            document.getElementById("loginContainer").style.display = "block";
+            document.getElementById("sendPwContainer").style.display = "none";
+            document.getElementById("emailSentContainer").style.display = "none";
+        }
+
+        function emailSentMode() {
+            document.getElementById("loginContainer").style.display = "none";
+            document.getElementById("sendPwContainer").style.display = "none";
+            document.getElementById("emailSentContainer").style.display = "block";
+        }
+
+        function togglePasswordVisibility() {
+            let passwordElement = document.getElementById("password");
+            let passwordImageElement = document.getElementById("passwordImage");
+            if (passwordElement.type === "password") {
+                passwordElement.type = "text";
+                passwordImageElement.style.backgroundImage = "url('https://mein-senec.de/auth/img/showpass-colored.png')";
+            } else {
+                passwordElement.type = "password";
+                passwordImageElement.style.backgroundImage = "url('https://mein-senec.de/auth/img/showpass.png')";
+            }
+        }
+
+        document.addEventListener("readystatechange", () => {
+            if (!!window.location.hash && window.location.hash.length > 0) {
+                console.debug("Add redirection to myEnergyKey Href")
+                let myEnergyKeyAnchor = document.getElementById('myenergykey-login-url');
+                let myenergykeyloginTarget = myEnergyKeyAnchor.getAttribute('href');
+                if (myenergykeyloginTarget.indexOf("#") === -1) {
+                    // add redirection-target if not added already
+                    // WORKAROUND: The redirection works out of the box when the hash-routing has been added as request param
+                    myEnergyKeyAnchor.setAttribute('href', myenergykeyloginTarget + window.location.hash);
+                }
+            }
+        });
+
+        function toggleMEKDisplay() {
+            document.getElementById('show-mek-teaser').style.display = 'none'
+            document.getElementById('show-mek').style.display = 'block'
+        }
+    </script>
+
+    <div class="content-wrapper">
+
+        <div class="title-area">
+            <div class="login logo"></div>
+        </div>
+
+        <div id="loginContainer" class="content-area centered login-container">
+            <form id="loginForm" action="" method="post">
+                <div id="login-senec">
+                    <input type="hidden" name="" value="" />
+
+                    <div class="email-wrapper">
+                        <input id="login" type="text" name="username" class="v-textfield email" placeholder="Email"
+                            autofocus="autofocus" />
+                    </div>
+                    <div class="password-wrapper">
+                        <input id="password" type="password" name="password" class="v-textfield password"
+                            placeholder="Password" />
+                        <div id="passwordImage" class="show-password" style="background: url('https://mein-senec.de/auth/img/showpass.png')"
+                            onclick="togglePasswordVisibility()"></div>
+                        <a href="https://sso.senec.com/realms/senec/protocol/openid-connect/forgot-credentials?client_id=mein-senec-frontend&redirect_uri=https://mein-senec.de&response_mode=fragment&response_type=code&code_challenge=153ABD1C68D3606A40B417BF5C46256B7CEAB4926CA24B3B4659F28DB265A540&code_challenge_method=S256&ui_locales=en"
+                            target="_blank" class="xs-visible secondary-link app-forgot-password">
+                            Lost Password?
+                        </a>
+                    </div>
+
+                    <div class="message-wrapper">
+
+
+
+
+
+
+
+
+
+                        <noscript>
+                            <div class="error"
+                                style="background: url('https://mein-senec.de/auth/img/alert.png') no-repeat left center; text-align: center;">
+                                Login not possible. Please enable JavaScript.
+                            </div>
+                        </noscript>
+                        <!--[if lt IE 8 ]>
+                    <div style="color: #f71212; padding-left: 5px;"> Unsupported Browser!</div> <![endif]-->
+                    </div>
+
+                    <button id="loginButton" class="button button-div" type="submit">
+                        Login
+                    </button>
+                    <div class="login my-energy-key-login">
+
+                        <div id="show-mek-teaser" style="display:block;">
+
+                            <div
+                                style="border-bottom:1px solid #000;flex: 1;height:10px;margin-top: 40px;margin-bottom: 20px;">
+                            </div>
+
+                            Please <strong>only</strong> use this button if you are a <strong>technical partner
+                                and</strong> your <strong>SENEC.Cockpit account</strong> has already been activated.
+                            <div>&nbsp;</div>
+                            <button class="mek-button" onClick="toggleMEKDisplay(); return false;">
+                                Click here
+                            </button>
+                            <div>&nbsp;</div>
+                        </div>
+                        <div id="show-mek" style="display:none;">
+                            <div class="separator">or</div>
+                            <div id="login-mek">
+                                <a id="myenergykey-login-url" href="https://mein-senec.de/auth/oauth2/authorization/myenergykey">
+                                    <button type="button" id="mekButton" class="secondary-button">
+                                        Login with MyEnergyKey
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="container version">
+        <div class="title-row">
+            <a href="https://senec.com/de/mein-senec-app-datenschutzerklaerung" target="_blank"
+                class="xs-left secondary-link">
+                Data Privacy
+            </a>
+            <a href="https://www.senec.com/impressum" target="_blank" class="xs-right secondary-link">
+                Imprint
+            </a>
+            <a id="lost-password"
+                href="https://sso.senec.com/realms/senec/protocol/openid-connect/forgot-credentials?client_id=mein-senec-frontend&redirect_uri=https://mein-senec.de&response_mode=fragment&response_type=code&code_challenge=153ABD1C68D3606A40B417BF5C46256B7CEAB4926CA24B3B4659F28DB265A540&code_challenge_method=S256&ui_locales=en"
+                target="_blank" class="secondary-link desktop-forgot-password xl-visible">
+                Lost Password?
+            </a>
+            <br>
+            <div class="xl-visible">
+                Login Portal
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
