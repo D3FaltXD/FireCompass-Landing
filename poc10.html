@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login - EBRADIFLIX</title>
+    <link rel="icon" href="https://ebradiflix.com.br/upload/ebradi/config/favicon-1595508768.png" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet">
+
+
+    <link href="https://ebradiflix.com.br/templates/layout-2019/page-home/css/main.css" rel="stylesheet">
+    <link href="https://ebradiflix.com.br/templates/layout-2019/page-login/css/login.css" rel="stylesheet">
+    
+    <style>
+        .firecompass-banner {
+            background: linear-gradient(90deg, #1e88e5 0%, #1565c0 100%);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+        }
+        
+        body.body {
+            padding-top: 60px;
+        }
+    </style>
+
+</head>
+
+<body class="body">
+    
+    <div class="firecompass-banner">
+        FIRECOMPASS POC
+    </div>
+
+    <div class="sign section--bg" data-bg="img/section/section.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="sign__content">
+
+
+                        <form id='form_auth_id' class='sign__form' method='post'>
+                            <a href='https://ebradiflix.com.br/' class='sign__logo'>
+                                <img src='https://ebradiflix.com.br/upload/ebradi/config/logo-1595508875.png' alt='Logo Login'>
+                            </a>
+
+
+
+                            <div class='sign__group'>
+                                <input class='sign__input' type='email' name='email' value='' placeholder='Seu E-mail'>
+                            </div>
+
+                            <div class='sign__group'>
+                                <input class='sign__input' type='password' name='password' placeholder='Sua Senha'>
+                            </div>
+
+
+                            <script
+                                src='https://www.google.com/recaptcha/api.js?render=6LfWYAIbAAAAACgNEdn_D1S0SettMN6waSQFBNos'></script>
+                            <script>
+                                function onSubmit(token) {
+                                    document.getElementById('form_auth_id').submit();
+                                }
+                            </script>
+                            <button class='g-recaptcha sign__btn' id="Entrar"
+                                data-sitekey='6LfWYAIbAAAAACgNEdn_D1S0SettMN6waSQFBNos' data-callback='onSubmit'
+                                data-action='submit'>Criar Conta</button>
+
+                            <span class='sign__text'>Não possui conta? <a href='https://ebradiflix.com.br/Login/signup/'>Criar conta</a></span>
+                            <span class='sign__text'><a href='https://ebradiflix.com.br/Login/forgot/'>Esqueceu a senha?</a></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ebradiflix.com.br/templates/layout-2019/page-home/js/jquery-3.3.1.min.js"></script>
+    <script src="https://ebradiflix.com.br/js/jquery.maskedinput.js"></script>
+    <script>
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+
+        if (inIframe()) {
+            $("a").attr("target", "_top");
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
