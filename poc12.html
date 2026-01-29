@@ -1,151 +1,3486 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
 
 <head>
-    <meta charset=UTF-8>
-    <meta name=viewport content="width=device-width,initial-scale=1">
-    <title>Login | Library For All</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="google-site-verification" content="AOlBCOL2afFebuy-9Po3EQFudWMlm7V9B1_qyJD0itU" />
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T5ZD252F');</script> <!-- End Google Tag Manager -->
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <!-- Start VWO Common Smartcode --> <!-- End VWO Common Smartcode --> <!-- Start VWO Async SmartCode -->
+    <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+    <script type='text/javascript' id='vwoCode'> /* Fix: wp-rocket (application/ld+json) */
+        window._vwo_code || (function () {
+            var w = window,
+                d = document;
+            var account_id = 757570,
+                version = 2.2,
+                settings_tolerance = 2000,
+                library_tolerance = 2500,
+                use_existing_jquery = false,
+                platform = 'web',
+                hide_element = 'body',
+                hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important';
+            /* DO NOT EDIT BELOW THIS LINE */
+            if (f = !1, v = d.querySelector('#vwoCode'), cc = {}, -1 < d.URL.indexOf('__vwo_disable__') || w._vwo_code) return; try { var e = JSON.parse(localStorage.getItem('_vwo_' + account_id + '_config')); cc = e && 'object' == typeof e ? e : {} } catch (e) { } function r(t) { try { return decodeURIComponent(t) } catch (e) { return t } } var s = function () { var e = { combination: [], combinationChoose: [], split: [], exclude: [], uuid: null, consent: null, optOut: null }, t = d.cookie || ''; if (!t) return e; for (var n, i, o = /(?:^|;\s*)(?:(_vis_opt_exp_(\d+)_combi=([^;]*))|(_vis_opt_exp_(\d+)_combi_choose=([^;]*))|(_vis_opt_exp_(\d+)_split=([^:;]*))|(_vis_opt_exp_(\d+)_exclude=[^;]*)|(_vis_opt_out=([^;]*))|(_vwo_global_opt_out=[^;]*)|(_vwo_uuid=([^;]*))|(_vwo_consent=([^;]*)))/g; null !== (n = o.exec(t));)try { n[1] ? e.combination.push({ id: n[2], value: r(n[3]) }) : n[4] ? e.combinationChoose.push({ id: n[5], value: r(n[6]) }) : n[7] ? e.split.push({ id: n[8], value: r(n[9]) }) : n[10] ? e.exclude.push({ id: n[11] }) : n[12] ? e.optOut = r(n[13]) : n[14] ? e.optOut = !0 : n[15] ? e.uuid = r(n[16]) : n[17] && (i = r(n[18]), e.consent = i && 3 <= i.length ? i.substring(0, 3) : null) } catch (e) { } return e }(); function i() { var e = function () { if (w.VWO && Array.isArray(w.VWO)) for (var e = 0; e < w.VWO.length; e++) { var t = w.VWO[e]; if (Array.isArray(t) && ('setVisitorId' === t[0] || 'setSessionId' === t[0])) return !0 } return !1 }(), t = 'a=' + account_id + '&u=' + encodeURIComponent(w._vis_opt_url || d.URL) + '&vn=' + version + '&ph=1' + ('undefined' != typeof platform ? '&p=' + platform : '') + '&st=' + w.performance.now(); e || ((n = function () { var e, t = [], n = {}, i = w.VWO && w.VWO.appliedCampaigns || {}; for (e in i) { var o = i[e] && i[e].v; o && (t.push(e + '-' + o + '-1'), n[e] = !0) } if (s && s.combination) for (var r = 0; r < s.combination.length; r++) { var a = s.combination[r]; n[a.id] || t.push(a.id + '-' + a.value) } return t.join('|') }()) && (t += '&c=' + n), (n = function () { var e = [], t = {}; if (s && s.combinationChoose) for (var n = 0; n < s.combinationChoose.length; n++) { var i = s.combinationChoose[n]; e.push(i.id + '-' + i.value), t[i.id] = !0 } if (s && s.split) for (var o = 0; o < s.split.length; o++)t[(i = s.split[o]).id] || e.push(i.id + '-' + i.value); return e.join('|') }()) && (t += '&cc=' + n), (n = function () { var e = {}, t = []; if (w.VWO && Array.isArray(w.VWO)) for (var n = 0; n < w.VWO.length; n++) { var i = w.VWO[n]; if (Array.isArray(i) && 'setVariation' === i[0] && i[1] && Array.isArray(i[1])) for (var o = 0; o < i[1].length; o++) { var r, a = i[1][o]; a && 'object' == typeof a && (r = a.e, a = a.v, r && a && (e[r] = a)) } } for (r in e) t.push(r + '-' + e[r]); return t.join('|') }()) && (t += '&sv=' + n)), s && s.optOut && (t += '&o=' + s.optOut); var n = function () { var e = [], t = {}; if (s && s.exclude) for (var n = 0; n < s.exclude.length; n++) { var i = s.exclude[n]; t[i.id] || (e.push(i.id), t[i.id] = !0) } return e.join('|') }(); return n && (t += '&e=' + n), s && s.uuid && (t += '&id=' + s.uuid), s && s.consent && (t += '&consent=' + s.consent), w.name && -1 < w.name.indexOf('_vis_preview') && (t += '&pM=true'), w.VWO && w.VWO.ed && (t += '&ed=' + w.VWO.ed), t } code = { nonce: v && v.nonce, use_existing_jquery: function () { return 'undefined' != typeof use_existing_jquery ? use_existing_jquery : void 0 }, library_tolerance: function () { return 'undefined' != typeof library_tolerance ? library_tolerance : void 0 }, settings_tolerance: function () { return cc.sT || settings_tolerance }, hide_element_style: function () { return '{' + (cc.hES || hide_element_style) + '}' }, hide_element: function () { return performance.getEntriesByName('first-contentful-paint')[0] ? '' : 'string' == typeof cc.hE ? cc.hE : hide_element }, getVersion: function () { return version }, finish: function (e) { var t; f || (f = !0, (t = d.getElementById('_vis_opt_path_hides')) && t.parentNode.removeChild(t), e && ((new Image).src = 'https://dev.visualwebsiteoptimizer.com/ee.gif?a=' + account_id + e)) }, finished: function () { return f }, addScript: function (e) { var t = d.createElement('script'); t.type = 'text/javascript', e.src ? t.src = e.src : t.text = e.text, v && t.setAttribute('nonce', v.nonce), d.getElementsByTagName('head')[0].appendChild(t) }, load: function (e, t) { t = t || {}; var n = new XMLHttpRequest; n.open('GET', e, !0), n.withCredentials = !t.dSC, n.responseType = t.responseType || 'text', n.onload = function () { if (t.onloadCb) return t.onloadCb(n, e); 200 === n.status ? _vwo_code.addScript({ text: n.responseText }) : _vwo_code.finish('&e=loading_failure:' + e) }, n.onerror = function () { if (t.onerrorCb) return t.onerrorCb(e); _vwo_code.finish('&e=loading_failure:' + e) }, n.send() }, init: function () { var e, t = this.settings_tolerance(); w._vwo_settings_timer = setTimeout(function () { _vwo_code.finish() }, t), 'body' !== this.hide_element() ? (n = d.createElement('style'), e = (t = this.hide_element()) ? t + this.hide_element_style() : '', t = d.getElementsByTagName('head')[0], n.setAttribute('id', '_vis_opt_path_hides'), v && n.setAttribute('nonce', v.nonce), n.setAttribute('type', 'text/css'), n.styleSheet ? n.styleSheet.cssText = e : n.appendChild(d.createTextNode(e)), t.appendChild(n)) : (n = d.getElementsByTagName('head')[0], (e = d.createElement('div')).style.cssText = 'z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;', e.setAttribute('id', '_vis_opt_path_hides'), e.classList.add('_vis_hide_layer'), n.parentNode.insertBefore(e, n.nextSibling)); var n = 'https://dev.visualwebsiteoptimizer.com/j.php?' + i(); -1 !== w.location.search.indexOf('_vwo_xhr') ? this.addScript({ src: n }) : this.load(n + '&x=true', { l: 1 }) } }; w._vwo_code = code; code.init();
+        })();
+    </script> <!-- End VWO Async SmartCode -->
+    <!-- This site is optimized with the Yoast SEO plugin v26.5 - https://yoast.com/wordpress/plugins/seo/ -->
+    <title>Home - Library For All</title>
+    <link rel="stylesheet" id="siteground-optimizer-combined-css-8bacc7c302f2fa9122d3ddc51de5dec0"
+        href="https://libraryforall.org/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-8bacc7c302f2fa9122d3ddc51de5dec0.css"
+        media="all" />
+    <link rel="preload"
+        href="https://libraryforall.org/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-css-8bacc7c302f2fa9122d3ddc51de5dec0.css"
+        as="style">
+    <meta name="description"
+        content="Children must learn to read, so they can read to learn. We’re working to make literacy possible for every child, anywhere." />
+    <link rel="canonical" href="https://libraryforall.org/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home - Library For All" />
+    <meta property="og:description"
+        content="Children must learn to read, so they can read to learn. We’re working to make literacy possible for every child, anywhere." />
+    <meta property="og:url" content="https://libraryforall.org/" />
+    <meta property="og:site_name" content="Library For All" />
+    <meta property="article:publisher" content="https://www.facebook.com/libraryforall" />
+    <meta property="article:modified_time" content="2025-07-30T09:10:00+00:00" />
+    <meta property="og:image" content="https://libraryforall.org/wp-content/uploads/2025/06/AQ0A0354-WEB.jpg" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="1500" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json"
+        class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://libraryforall.org/","url":"https://libraryforall.org/","name":"Home - Library For All","isPartOf":{"@id":"https://libraryforall.org/#website"},"about":{"@id":"https://libraryforall.org/#organization"},"primaryImageOfPage":{"@id":"https://libraryforall.org/#primaryimage"},"image":{"@id":"https://libraryforall.org/#primaryimage"},"thumbnailUrl":"https://libraryforall.org/wp-content/uploads/2025/06/AQ0A0354-WEB.jpg","datePublished":"2023-09-05T07:46:07+00:00","dateModified":"2025-07-30T09:10:00+00:00","description":"Children must learn to read, so they can read to learn. We’re working to make literacy possible for every child, anywhere.","breadcrumb":{"@id":"https://libraryforall.org/#breadcrumb"},"inLanguage":"en-AU","potentialAction":[{"@type":"ReadAction","target":["https://libraryforall.org/"]}]},{"@type":"ImageObject","inLanguage":"en-AU","@id":"https://libraryforall.org/#primaryimage","url":"https://libraryforall.org/wp-content/uploads/2025/06/AQ0A0354-WEB.jpg","contentUrl":"https://libraryforall.org/wp-content/uploads/2025/06/AQ0A0354-WEB.jpg","width":1000,"height":1500},{"@type":"BreadcrumbList","@id":"https://libraryforall.org/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://libraryforall.org/#website","url":"https://libraryforall.org/","name":"Library for All","description":"We make culturally relevant books and learning materials for communities worldwide","publisher":{"@id":"https://libraryforall.org/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://libraryforall.org/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-AU"},{"@type":"Organization","@id":"https://libraryforall.org/#organization","name":"Library for All","url":"https://libraryforall.org/","logo":{"@type":"ImageObject","inLanguage":"en-AU","@id":"https://libraryforall.org/#/schema/logo/image/","url":"https://libraryforall.org/wp-content/uploads/2023/09/Library_for_All-Logo-Badge-AngledBlack.png","contentUrl":"https://libraryforall.org/wp-content/uploads/2023/09/Library_for_All-Logo-Badge-AngledBlack.png","width":406,"height":406,"caption":"Library for All"},"image":{"@id":"https://libraryforall.org/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/libraryforall","https://www.youtube.com/@libraryforall2184","https://www.linkedin.com/company/library-for-all/","https://www.instagram.com/libraryforall/"]}]}</script>
+    <!-- / Yoast SEO plugin. -->
+    <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+    <link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
+        href="https://libraryforall.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flibraryforall.org%2F" />
+    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
+        href="https://libraryforall.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flibraryforall.org%2F&#038;format=xml" />
+    <style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+        img:is([sizes=auto i], [sizes^="auto," i]) {
+            contain-intrinsic-size: 3000px 1500px
         }
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: #f8fafc;
-            padding: 16px
+        /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+    </style>
+    <style id='wp-block-library-inline-css' type='text/css'>
+        :root {
+            --wp-block-synced-color: #7a00df;
+            --wp-block-synced-color--rgb: 122, 0, 223;
+            --wp-bound-block-color: var(--wp-block-synced-color);
+            --wp-editor-canvas-background: #ddd;
+            --wp-admin-theme-color: #007cba;
+            --wp-admin-theme-color--rgb: 0, 124, 186;
+            --wp-admin-theme-color-darker-10: #006ba1;
+            --wp-admin-theme-color-darker-10--rgb: 0, 107, 160.5;
+            --wp-admin-theme-color-darker-20: #005a87;
+            --wp-admin-theme-color-darker-20--rgb: 0, 90, 135;
+            --wp-admin-border-width-focus: 2px
         }
 
-        .card {
-            width: 100%;
-            max-width: 420px;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, .1);
-            overflow: hidden
+        @media (min-resolution:192dpi) {
+            :root {
+                --wp-admin-border-width-focus: 1.5px
+            }
         }
 
-        .topbar {
-            height: 8px;
-            background: #F26522
-        }
-
-        .center {
-            text-align: center
-        }
-
-        .logo {
-            margin-bottom: 16px
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 24px;
-            color: #1f2937
-        }
-
-        .subtitle {
-            font-size: 12px;
-            letter-spacing: 2px;
-            color: #6b7280;
-            font-weight: 600;
-            text-transform: uppercase
-        }
-
-        h2 {
-            text-align: center;
-            margin: 0 0 24px;
-            font-size: 20px;
-            color: #1f2937
-        }
-
-        .form {
-            padding: 32px
-        }
-
-        .input {
-            width: 100%;
-            padding: 14px;
-            border-radius: 14px;
-            border: 1px solid #d1d5db;
-            font-size: 14px;
-            margin-bottom: 16px;
-            outline: none
-        }
-
-        .input:focus {
-            border-color: #00B2A9
-        }
-
-        .row {
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            color: #4b5563;
-            margin-bottom: 20px
-        }
-
-        .btn {
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 14px;
-            background: #00B2A9;
-            color: #fff;
-            font-weight: 700;
-            font-size: 15px;
+        .wp-element-button {
             cursor: pointer
         }
 
-        .btn:hover {
-            background: #00968F
+        :root .has-very-light-gray-background-color {
+            background-color: #eee
         }
 
-        footer {
-            margin-top: 48px;
-            font-size: 12px;
-            color: #9ca3af
+        :root .has-very-dark-gray-background-color {
+            background-color: #313131
+        }
+
+        :root .has-very-light-gray-color {
+            color: #eee
+        }
+
+        :root .has-very-dark-gray-color {
+            color: #313131
+        }
+
+        :root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background {
+            background: linear-gradient(135deg, #00d084, #0693e3)
+        }
+
+        :root .has-purple-crush-gradient-background {
+            background: linear-gradient(135deg, #34e2e4, #4721fb 50%, #ab1dfe)
+        }
+
+        :root .has-hazy-dawn-gradient-background {
+            background: linear-gradient(135deg, #faaca8, #dad0ec)
+        }
+
+        :root .has-subdued-olive-gradient-background {
+            background: linear-gradient(135deg, #fafae1, #67a671)
+        }
+
+        :root .has-atomic-cream-gradient-background {
+            background: linear-gradient(135deg, #fdd79a, #004a59)
+        }
+
+        :root .has-nightshade-gradient-background {
+            background: linear-gradient(135deg, #330968, #31cdcf)
+        }
+
+        :root .has-midnight-gradient-background {
+            background: linear-gradient(135deg, #020381, #2874fc)
+        }
+
+        :root {
+            --wp--preset--font-size--normal: 16px;
+            --wp--preset--font-size--huge: 42px
+        }
+
+        .has-regular-font-size {
+            font-size: 1em
+        }
+
+        .has-larger-font-size {
+            font-size: 2.625em
+        }
+
+        .has-normal-font-size {
+            font-size: var(--wp--preset--font-size--normal)
+        }
+
+        .has-huge-font-size {
+            font-size: var(--wp--preset--font-size--huge)
+        }
+
+        .has-text-align-center {
+            text-align: center
+        }
+
+        .has-text-align-left {
+            text-align: left
+        }
+
+        .has-text-align-right {
+            text-align: right
+        }
+
+        .has-fit-text {
+            white-space: nowrap !important
+        }
+
+        #end-resizable-editor-section {
+            display: none
+        }
+
+        .aligncenter {
+            clear: both
+        }
+
+        .items-justified-left {
+            justify-content: flex-start
+        }
+
+        .items-justified-center {
+            justify-content: center
+        }
+
+        .items-justified-right {
+            justify-content: flex-end
+        }
+
+        .items-justified-space-between {
+            justify-content: space-between
+        }
+
+        .screen-reader-text {
+            border: 0;
+            clip-path: inset(50%);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+            word-wrap: normal !important
+        }
+
+        .screen-reader-text:focus {
+            background-color: #ddd;
+            clip-path: none;
+            color: #444;
+            display: block;
+            font-size: 1em;
+            height: auto;
+            left: 5px;
+            line-height: normal;
+            padding: 15px 23px 14px;
+            text-decoration: none;
+            top: 5px;
+            width: auto;
+            z-index: 100000
+        }
+
+        html :where(.has-border-color) {
+            border-style: solid
+        }
+
+        html :where([style*=border-top-color]) {
+            border-top-style: solid
+        }
+
+        html :where([style*=border-right-color]) {
+            border-right-style: solid
+        }
+
+        html :where([style*=border-bottom-color]) {
+            border-bottom-style: solid
+        }
+
+        html :where([style*=border-left-color]) {
+            border-left-style: solid
+        }
+
+        html :where([style*=border-width]) {
+            border-style: solid
+        }
+
+        html :where([style*=border-top-width]) {
+            border-top-style: solid
+        }
+
+        html :where([style*=border-right-width]) {
+            border-right-style: solid
+        }
+
+        html :where([style*=border-bottom-width]) {
+            border-bottom-style: solid
+        }
+
+        html :where([style*=border-left-width]) {
+            border-left-style: solid
+        }
+
+        html :where(img[class*=wp-image-]) {
+            height: auto;
+            max-width: 100%
+        }
+
+        :where(figure) {
+            margin: 0 0 1em
+        }
+
+        html :where(.is-position-sticky) {
+            --wp-admin--admin-bar--position-offset: var(--wp-admin--admin-bar--height, 0px)
+        }
+
+        @media screen and (max-width:600px) {
+            html :where(.is-position-sticky) {
+                --wp-admin--admin-bar--position-offset: 0px
+            }
+        }
+
+        /*# sourceURL=wp-block-library-inline-css */
+    </style>
+    <style id='wp-block-columns-inline-css' type='text/css'>
+        .wp-block-columns {
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap !important
+        }
+
+        @media (min-width:782px) {
+            .wp-block-columns {
+                flex-wrap: nowrap !important
+            }
+        }
+
+        .wp-block-columns {
+            align-items: normal !important
+        }
+
+        .wp-block-columns.are-vertically-aligned-top {
+            align-items: flex-start
+        }
+
+        .wp-block-columns.are-vertically-aligned-center {
+            align-items: center
+        }
+
+        .wp-block-columns.are-vertically-aligned-bottom {
+            align-items: flex-end
+        }
+
+        @media (max-width:781px) {
+            .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+                flex-basis: 100% !important
+            }
+        }
+
+        @media (min-width:782px) {
+            .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+                flex-basis: 0;
+                flex-grow: 1
+            }
+
+            .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis] {
+                flex-grow: 0
+            }
+        }
+
+        .wp-block-columns.is-not-stacked-on-mobile {
+            flex-wrap: nowrap !important
+        }
+
+        .wp-block-columns.is-not-stacked-on-mobile>.wp-block-column {
+            flex-basis: 0;
+            flex-grow: 1
+        }
+
+        .wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis] {
+            flex-grow: 0
+        }
+
+        :where(.wp-block-columns) {
+            margin-bottom: 1.75em
+        }
+
+        :where(.wp-block-columns.has-background) {
+            padding: 1.25em 2.375em
+        }
+
+        .wp-block-column {
+            flex-grow: 1;
+            min-width: 0;
+            overflow-wrap: break-word;
+            word-break: break-word
+        }
+
+        .wp-block-column.is-vertically-aligned-top {
+            align-self: flex-start
+        }
+
+        .wp-block-column.is-vertically-aligned-center {
+            align-self: center
+        }
+
+        .wp-block-column.is-vertically-aligned-bottom {
+            align-self: flex-end
+        }
+
+        .wp-block-column.is-vertically-aligned-stretch {
+            align-self: stretch
+        }
+
+        .wp-block-column.is-vertically-aligned-bottom,
+        .wp-block-column.is-vertically-aligned-center,
+        .wp-block-column.is-vertically-aligned-top {
+            width: 100%
+        }
+
+        /*# sourceURL=https://libraryforall.org/wp-includes/blocks/columns/style.min.css */
+    </style>
+    <style id='wp-block-paragraph-inline-css' type='text/css'>
+        .is-small-text {
+            font-size: .875em
+        }
+
+        .is-regular-text {
+            font-size: 1em
+        }
+
+        .is-large-text {
+            font-size: 2.25em
+        }
+
+        .is-larger-text {
+            font-size: 3em
+        }
+
+        .has-drop-cap:not(:focus):first-letter {
+            float: left;
+            font-size: 8.4em;
+            font-style: normal;
+            font-weight: 100;
+            line-height: .68;
+            margin: .05em .1em 0 0;
+            text-transform: uppercase
+        }
+
+        body.rtl .has-drop-cap:not(:focus):first-letter {
+            float: none;
+            margin-left: .1em
+        }
+
+        p.has-drop-cap.has-background {
+            overflow: hidden
+        }
+
+        :root :where(p.has-background) {
+            padding: 1.25em 2.375em
+        }
+
+        :where(p.has-text-color:not(.has-link-color)) a {
+            color: inherit
+        }
+
+        p.has-text-align-left[style*="writing-mode:vertical-lr"],
+        p.has-text-align-right[style*="writing-mode:vertical-rl"] {
+            rotate: 180deg
+        }
+
+        /*# sourceURL=https://libraryforall.org/wp-includes/blocks/paragraph/style.min.css */
+    </style>
+    <style id='global-styles-inline-css' type='text/css'>
+        :root {
+            --wp--preset--aspect-ratio--square: 1;
+            --wp--preset--aspect-ratio--4-3: 4/3;
+            --wp--preset--aspect-ratio--3-4: 3/4;
+            --wp--preset--aspect-ratio--3-2: 3/2;
+            --wp--preset--aspect-ratio--2-3: 2/3;
+            --wp--preset--aspect-ratio--16-9: 16/9;
+            --wp--preset--aspect-ratio--9-16: 9/16;
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgb(6, 147, 227) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgb(252, 185, 0) 0%, rgb(255, 105, 0) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgb(255, 105, 0) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+            --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+            --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);
+            --wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        :where(.is-layout-grid) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .is-layout-flex> :is(*, div) {
+            margin: 0;
+        }
+
+        body .is-layout-grid {
+            display: grid;
+        }
+
+        .is-layout-grid> :is(*, div) {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-columns.is-layout-grid) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-post-template.is-layout-flex) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-post-template.is-layout-grid) {
+            gap: 1.25em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-columns.is-layout-grid) {
+            gap: 2em;
+        }
+
+        /*# sourceURL=global-styles-inline-css */
+    </style>
+    <style id='core-block-supports-inline-css' type='text/css'>
+        .wp-container-core-columns-is-layout-9d6595d7 {
+            flex-wrap: nowrap;
+        }
+
+        /*# sourceURL=core-block-supports-inline-css */
+    </style>
+    <style id='classic-theme-styles-inline-css' type='text/css'>
+        /*! This file is auto-generated */
+        .wp-block-button__link {
+            color: #fff;
+            background-color: #32373c;
+            border-radius: 9999px;
+            box-shadow: none;
+            text-decoration: none;
+            padding: calc(.667em + 2px) calc(1.333em + 2px);
+            font-size: 1.125em
+        }
+
+        .wp-block-file__button {
+            background: #32373c;
+            color: #fff;
+            text-decoration: none
+        }
+
+        /*# sourceURL=/wp-includes/css/classic-themes.min.css */
+    </style>
+    <script type="text/javascript" src="https://libraryforall.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+        id="jquery-core-js"></script>
+    <script type="text/javascript" id="sf_main-js-extra"> /* <![CDATA[ */
+        var SF_Opts = { "social": [], "search": "hidden", "blur": "", "fade": "no", "test_mode": "", "hide_def": "", "mob_nav": "", "dynamic": "", "sidebar_style": "full", "sidebar_behaviour": "slide", "alt_menu": "", "sidebar_pos": "left", "width_panel_1": "275", "width_panel_2": "250", "width_panel_3": "250", "width_panel_4": "200", "base_color": "#ffffff", "opening_type": "click", "sub_type": "", "sub_opening_type": "hover", "label": "none", "label_top": "0px", "label_size": "53px", "label_vis": "hidden", "item_padding": "15", "bg": "", "path": "https://libraryforall.org/wp-content/plugins/superfly-menu/img/", "menu": "{\"2\":{\"term_id\":2,\"name\":\"Main Menu\",\"loc\":{\"pages\":{\"9\":1,\"202\":1,\"374\":1,\"527\":1,\"530\":1,\"662\":1,\"703\":1,\"757\":1,\"906\":1,\"932\":1,\"943\":1,\"953\":1,\"955\":1,\"957\":1,\"959\":1,\"961\":1,\"1452\":1,\"1588\":1},\"cposts\":{\"case-study\":1,\"impact-story\":1,\"product\":1},\"cats\":{\"1\":1,\"11\":1,\"12\":1},\"taxes\":{},\"langs\":{},\"wp_pages\":{\"front\":1,\"home\":1,\"archive\":1,\"single\":1,\"forbidden\":1,\"search\":1},\"ids\":[\"\"]},\"isDef\":true}}", "togglers": ".navbar-toggler", "subMenuSupport": "yes", "subMenuSelector": "sub-menu, children", "eventsInterval": "51", "activeClassSelector": "current-menu-item", "allowedTags": "DIV, NAV, UL, OL, LI, A, P, H1, H2, H3, H4, SPAN", "menuData": { "1174": "img=&icon_manager_search=&la_icon_manager_menu-item-1174_custom=&icon=&icon_color=&sline=&chapter=&content=&bg=&width=&hidemob=yes" }, "siteBase": "https://libraryforall.org", "plugin_ver": "4.5.9" };
+        //# sourceURL=sf_main-js-extra
+        /* ]]> */ </script>
+    <link rel="https://api.w.org/" href="https://libraryforall.org/wp-json/" />
+    <link rel="alternate" title="JSON" type="application/json" href="https://libraryforall.org/wp-json/wp/v2/pages/9" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://libraryforall.org/xmlrpc.php?rsd" />
+    <meta name="generator" content="WordPress 6.9" />
+    <link rel='shortlink' href='https://libraryforall.org/' />
+    <style id="superfly-dynamic-styles">
+        @font-face {
+            font-family: 'sfm-icomoon';
+            src: url('https://libraryforall.org/wp-content/plugins/superfly-menu/img/fonts/icomoon.eot?wehgh4');
+            src: url('https://libraryforall.org/wp-content/plugins/superfly-menu/img/fonts/icomoon.svg?wehgh4#icomoon') format('svg'),
+                url('https://libraryforall.org/wp-content/plugins/superfly-menu/img/fonts/icomoon.eot?#iefixwehgh4') format('embedded-opentype'),
+                url('https://libraryforall.org/wp-content/plugins/superfly-menu/img/fonts/icomoon.woff?wehgh4') format('woff'),
+                url('https://libraryforall.org/wp-content/plugins/superfly-menu/img/fonts/icomoon.ttf?wehgh4') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #sfm-sidebar.sfm-vertical-nav .sfm-has-child-menu .sfm-sm-indicator i:after {
+            content: '\e610';
+            -webkit-transition: all 0.3s cubic-bezier(0.215, 0.061, 0.355, 1);
+            -moz-transition: all 0.3s cubic-bezier(0.215, 0.061, 0.355, 1);
+            -o-transition: all 0.3s cubic-bezier(0.215, 0.061, 0.355, 1);
+            transition: all 0.3s cubic-bezier(0.215, 0.061, 0.355, 1);
+            -webkit-backface-visibility: hidden;
+            display: inline-block;
+        }
+
+        .sfm-navicon,
+        .sfm-navicon:after,
+        .sfm-navicon:before,
+        .sfm-sidebar-close:before,
+        .sfm-sidebar-close:after {
+            height: 1px !important;
+        }
+
+        .sfm-label-square .sfm-navicon-button,
+        .sfm-label-rsquare .sfm-navicon-button,
+        .sfm-label-circle .sfm-navicon-button {
+            border-width: 1px !important;
+        }
+
+        .sfm-vertical-nav .sfm-submenu-visible>a .sfm-sm-indicator i:after {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        #sfm-mob-navbar .sfm-navicon-button:after {
+            /*width: 30px;*/
+        }
+
+        .sfm-pos-right .sfm-vertical-nav .sfm-has-child-menu>a:before {
+            display: none;
+        }
+
+        #sfm-sidebar.sfm-vertical-nav .sfm-menu .sfm-sm-indicator {
+            background: rgba(255, 255, 255, 0.085);
+        }
+
+        .sfm-pos-right #sfm-sidebar.sfm-vertical-nav .sfm-menu li a {
+            /*padding-left: 10px !important;*/
+        }
+
+        .sfm-pos-right #sfm-sidebar.sfm-vertical-nav .sfm-sm-indicator {
+            left: auto;
+            right: 0;
+        }
+
+        .sfm-mobile #sfm-sidebar.sfm-compact-header .sfm-logo img {
+            max-height: 75px;
+        }
+
+        #sfm-sidebar.sfm-compact .sfm-nav {
+            min-height: 50vh;
+            height: auto;
+            max-height: none;
+            margin-top: 0px;
+        }
+
+        #sfm-sidebar.sfm-compact-footer .sfm-social {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        #sfm-sidebar.sfm-compact .sfm-sidebar-bg {
+            min-height: 150%;
+        }
+
+        #sfm-sidebar.sfm-compact input[type=search] {
+            font-size: 16px;
+        }
+
+        /*}*/
+        #sfm-sidebar .sfm-sidebar-bg,
+        #sfm-sidebar .sfm-social {
+            background-color: #ffffff !important;
+        }
+
+        #sfm-sidebar,
+        .sfm-sidebar-bg,
+        #sfm-sidebar .sfm-nav,
+        #sfm-sidebar .sfm-logo,
+        #sfm-sidebar .sfm-social,
+        .sfm-style-toolbar .sfm-copy {
+            width: 275px;
+        }
+
+        #sfm-sidebar:not(.sfm-iconbar) .sfm-menu li>a span {
+            max-width: calc(275px - 80px);
+        }
+
+        #sfm-sidebar .sfm-social {
+            background-color: transparent !important;
+        }
+
+        #sfm-sidebar .sfm-menu li>a:before {
+            background: rgba(0, 0, 0, 0.05) !important;
+        }
+
+        #sfm-sidebar .sfm-menu li a,
+        #sfm-sidebar .sfm-chapter,
+        #sfm-sidebar .widget-area,
+        .sfm-search-form input {
+            padding-left: 28px !important;
+        }
+
+        #sfm-sidebar.sfm-compact .sfm-social li {
+            text-align: left;
+        }
+
+        #sfm-sidebar.sfm-compact .sfm-social:before {
+            right: auto;
+            left: auto;
+            left: 10%;
+        }
+
+        #sfm-sidebar:after {
+            display: none !important;
+        }
+
+        #sfm-sidebar .search-form {
+            display: none !important;
+        }
+
+        #sfm-sidebar,
+        .sfm-pos-right .sfm-sidebar-slide.sfm-body-pushed #sfm-mob-navbar {
+            -webkit-transform: translate(-275px, 0);
+            -moz-transform: translate(-275px, 0);
+            -ms-transform: translate(-275px, 0);
+            -o-transform: translate(-275px, 0);
+            transform: translate(-275px, 0);
+            -webkit-transform: translate3d(-275px, 0, 0);
+            -moz-transform: translate3d(-275px, 0, 0);
+            -ms-transform: translate3d(-275px, 0, 0);
+            -o-transform: translate3d(-275px, 0, 0);
+            transform: translate3d(-275px, 0, 0);
+        }
+
+        .sfm-pos-right #sfm-sidebar,
+        .sfm-sidebar-slide.sfm-body-pushed #sfm-mob-navbar {
+            -webkit-transform: translate(275px, 0);
+            -moz-transform: translate(275px, 0);
+            -ms-transform: translate(275px, 0);
+            -o-transform: translate(275px, 0);
+            transform: translate(275px, 0);
+            -webkit-transform: translate3d(275px, 0, 0);
+            -moz-transform: translate3d(275px, 0, 0);
+            -ms-transform: translate3d(275px, 0, 0);
+            -o-transform: translate3d(275px, 0, 0);
+            transform: translate3d(275px, 0, 0);
+        }
+
+        .sfm-pos-left #sfm-sidebar .sfm-view-level-1 {
+            left: 275px;
+            width: 250px;
+            -webkit-transform: translate(-250px, 0);
+            -moz-transform: translate(-250px, 0);
+            -ms-transform: translate(-250px, 0);
+            -o-transform: translate(-250px, 0);
+            transform: translate(-250px, 0);
+            -webkit-transform: translate3d(-250px, 0, 0);
+            -moz-transform: translate3d(-250px, 0, 0);
+            -ms-transform: translate3d(-250px, 0, 0);
+            -o-transform: translate3d(-250px, 0, 0);
+            transform: translate3d(-250px, 0, 0);
+        }
+
+        .sfm-pos-right #sfm-sidebar .sfm-view-level-1 {
+            left: auto;
+            right: 275px;
+            width: 250px;
+            -webkit-transform: translate(250px, 0);
+            -moz-transform: translate(250px, 0);
+            -ms-transform: translate(250px, 0);
+            -o-transform: translate(250px, 0);
+            transform: translate(250px, 0);
+            -webkit-transform: translate3d(250px, 0, 0);
+            -moz-transform: translate3d(250px, 0, 0);
+            -ms-transform: translate3d(250px, 0, 0);
+            -o-transform: translate3d(250px, 0, 0);
+            transform: translate3d(250px, 0, 0);
+        }
+
+        .sfm-pos-left #sfm-sidebar .sfm-view-level-2 {
+            left: 525px;
+            width: 250px;
+            -webkit-transform: translate(-775px, 0);
+            -moz-transform: translate(-775px, 0);
+            -ms-transform: translate(-775px, 0);
+            -o-transform: translate(-775px, 0);
+            transform: translate(-775px, 0);
+            -webkit-transform: translate3d(-775px, 0, 0);
+            -moz-transform: translate3d(-775px, 0, 0);
+            -ms-transform: translate3d(-775px, 0, 0);
+            -o-transform: translate3d(-775px, 0, 0);
+            transform: translate3d(-775px, 0, 0);
+        }
+
+        .sfm-pos-right #sfm-sidebar .sfm-view-level-2 {
+            left: auto;
+            right: 525px;
+            width: 250px;
+            -webkit-transform: translate(775px, 0);
+            -moz-transform: translate(775px, 0);
+            -ms-transform: translate(775px, 0);
+            -o-transform: translate(775px, 0);
+            transform: translate(775px, 0);
+            -webkit-transform: translate3d(775px, 0, 0);
+            -moz-transform: translate3d(775px, 0, 0);
+            -ms-transform: translate3d(775px, 0, 0);
+            -o-transform: translate3d(775px, 0, 0);
+            transform: translate3d(775px, 0, 0);
+        }
+
+        .sfm-pos-left #sfm-sidebar .sfm-view-level-3 {
+            left: 775px;
+            width: 200px;
+            -webkit-transform: translate(-775px, 0);
+            -moz-transform: translate(-775px, 0);
+            -ms-transform: translate(-775px, 0);
+            -o-transform: translate(-775px, 0);
+            transform: translate(-775px, 0);
+            -webkit-transform: translate3d(-775px, 0, 0);
+            -moz-transform: translate3d(-775px, 0, 0);
+            -ms-transform: translate3d(-775px, 0, 0);
+            -o-transform: translate3d(-775px, 0, 0);
+            transform: translate3d(-775px, 0, 0);
+        }
+
+        .sfm-pos-right #sfm-sidebar .sfm-view-level-3 {
+            left: auto;
+            right: 775px;
+            width: 200px;
+            -webkit-transform: translate(775px, 0);
+            -moz-transform: translate(775px, 0);
+            -ms-transform: translate(775px, 0);
+            -o-transform: translate(775px, 0);
+            transform: translate(775px, 0);
+            -webkit-transform: translate3d(775px, 0, 0);
+            -moz-transform: translate3d(775px, 0, 0);
+            -ms-transform: translate3d(775px, 0, 0);
+            -o-transform: translate3d(775px, 0, 0);
+            transform: translate3d(775px, 0, 0);
+        }
+
+        .sfm-view-pushed-1 #sfm-sidebar .sfm-view-level-2 {
+            -webkit-transform: translate(-250px, 0);
+            -moz-transform: translate(-250px, 0);
+            -ms-transform: translate(-250px, 0);
+            -o-transform: translate(-250px, 0);
+            transform: translate(-250px, 0);
+            -webkit-transform: translate3d(-250px, 0, 0);
+            -moz-transform: translate3d(-250px, 0, 0);
+            -ms-transform: translate3d(-250px, 0, 0);
+            -o-transform: translate3d(-250px, 0, 0);
+            transform: translate3d(-250px, 0, 0);
+        }
+
+        .sfm-pos-right .sfm-view-pushed-1 #sfm-sidebar .sfm-view-level-2 {
+            -webkit-transform: translate(250px, 0);
+            -moz-transform: translate(250px, 0);
+            -ms-transform: translate(250px, 0);
+            -o-transform: translate(250px, 0);
+            transform: translate(250px, 0);
+            -webkit-transform: translate3d(250px, 0, 0);
+            -moz-transform: translate3d(250px, 0, 0);
+            -ms-transform: translate3d(250px, 0, 0);
+            -o-transform: translate3d(250px, 0, 0);
+            transform: translate3d(250px, 0, 0);
+        }
+
+        .sfm-view-pushed-2 #sfm-sidebar .sfm-view-level-3 {
+            -webkit-transform: translate(-200px, 0);
+            -moz-transform: translate(-200px, 0);
+            -ms-transform: translate(-200px, 0);
+            -o-transform: translate(-200px, 0);
+            transform: translate(-200px, 0);
+            -webkit-transform: translate3d(-200px, 0, 0);
+            -moz-transform: translate3d(-200px, 0, 0);
+            -ms-transform: translate3d(-200px, 0, 0);
+            -o-transform: translate3d(-200px, 0, 0);
+            transform: translate3d(-200px, 0, 0);
+        }
+
+        .sfm-pos-right .sfm-view-pushed-2 #sfm-sidebar .sfm-view-level-3 {
+            -webkit-transform: translate(200px, 0);
+            -moz-transform: translate(200px, 0);
+            -ms-transform: translate(200px, 0);
+            -o-transform: translate(200px, 0);
+            transform: translate(200px, 0);
+            -webkit-transform: translate3d(200px, 0, 0);
+            -moz-transform: translate3d(200px, 0, 0);
+            -ms-transform: translate3d(200px, 0, 0);
+            -o-transform: translate3d(200px, 0, 0);
+            transform: translate3d(200px, 0, 0);
+        }
+
+        #sfm-sidebar .sfm-view-level-1,
+        #sfm-sidebar ul.sfm-menu-level-1 {
+            background: #ffffff;
+        }
+
+        #sfm-sidebar {
+            /*z-index: 1;*/
+        }
+
+        #sfm-sidebar .sfm-sidebar-bg,
+        #sfm-sidebar .sfm-scroll-wrapper {
+            opacity: 0 !important;
+        }
+
+        #sfm-sidebar.sfm-sidebar-exposed .sfm-scroll-wrapper {
+            opacity: 1 !important;
+        }
+
+        #sfm-sidebar .sfm-social {
+            background-color: transparent !important;
+        }
+
+        #sfm-sidebar .sfm-widget,
+        .sfm-menu li a {
+            text-align: center !important;
+        }
+
+        .sfm-nav form,
+        .sfm-menu li img,
+        #sfm-sidebar .sfm-chapter,
+        .sfm-menu li br,
+        #sfm-sidebar .sfm-menu li:after {
+            display: none !important;
+        }
+
+        #sfm-sidebar.sfm-sidebar-exposed,
+        .sfm-sidebar-bg,
+        #sfm-sidebar .sfm-nav,
+        #sfm-sidebar .sfm-logo,
+        #sfm-sidebar .sfm-social {
+            width: 100%;
+        }
+
+        .sfm-rollback {
+            /*z-index: 3000002;*/
+        }
+
+        .sfm-sidebar-close:before,
+        .sfm-sidebar-close:after {
+            background-color: #000000;
+        }
+
+        #sfm-sidebar {
+            opacity: 0 !important;
+            visibility: hidden;
+            width: 100% !important;
+        }
+
+        .sfm-body-pushed #sfm-sidebar {
+            opacity: 1 !important;
+            visibility: visible;
+        }
+
+        .sfm-pos-left .sfm-rollback {
+            left: 0;
+            right: auto;
+        }
+
+        .sfm-pos-right .sfm-rollback {
+            left: auto;
+            right: 0;
+        }
+
+        .sfm-body-pushed #sfm-overlay,
+        body[class*="sfm-view-pushed"] #sfm-overlay {
+            opacity: 1 !important;
+            background: rgb(255, 255, 255) !important;
+        }
+
+        #sfm-sidebar .sfm-menu li>a:before {
+            -webkit-transition: none;
+            -moz-transition: none;
+            -o-transition: none;
+            transition: none;
+            background: #000000;
+        }
+
+        #sfm-sidebar .sfm-menu li a {
+            padding-left: 5px !important;
+            padding-right: 5px !important;
+        }
+
+        #sfm-sidebar .sfm-menu li:hover>a {
+            color: #fff !important;
+        }
+
+        #sfm-sidebar .sfm-menu a img {
+            max-width: 40px;
+            max-height: 40px;
+        }
+
+        #sfm-sidebar .sfm-menu .la_icon {
+            font-size: 40px;
+            min-width: 40px;
+            min-height: 40px;
+        }
+
+        #sfm-sidebar .sfm-view-level-2,
+        #sfm-sidebar ul.sfm-menu-level-2 {
+            background: #36939e;
+        }
+
+        #sfm-sidebar .sfm-view-level-3,
+        #sfm-sidebar ul.sfm-menu-level-3 {
+            background: #9e466b;
+        }
+
+        #sfm-sidebar .sfm-menu-level-0 li,
+        #sfm-sidebar .sfm-menu-level-0 li a,
+        .sfm-title h3 {
+            color: #000000;
+        }
+
+        #sfm-sidebar .sfm-menu li a,
+        #sfm-sidebar .sfm-chapter,
+        #sfm-sidebar .sfm-search-form {
+            padding: 15px 0;
+            text-transform: uppercase;
+        }
+
+        #sfm-sidebar .sfm-search-form span {
+            top: 18px;
+        }
+
+        #sfm-sidebar {
+            font-family: inherit;
+        }
+
+        #sfm-sidebar .sfm-sm-indicator {
+            line-height: 18px;
+        }
+
+        #sfm-sidebar .sfm-search-form input {
+            font-size: 18px;
+        }
+
+        #sfm-sidebar .sfm-menu li a,
+        #sfm-sidebar .sfm-menu .sfm-chapter {
+            font-family: inherit;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: left;
+            -moz-font-smoothing: antialiased;
+            -webkit-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        #sfm-sidebar .sfm-widget,
+        #sfm-sidebar .widget-area {
+            text-align: left;
+        }
+
+        #sfm-sidebar .sfm-menu .sfm-chapter {
+            font-size: 15px;
+            margin-top: 15px;
+        }
+
+        #sfm-sidebar .sfm-menu .sfm-chapter div {
+            font-family: inherit;
+            font-size: 15px;
+        }
+
+        .sfm-rollback a {
+            font-family: inherit;
+        }
+
+        #sfm-sidebar .sfm-menu .la_icon {
+            color: #777;
+        }
+
+        #sfm-sidebar .sfm-menu-level-0 li .sfm-sm-indicator i,
+        #sfm-sidebar .sfm-menu-level-0 .sfm-sl,
+        .sfm-title h2,
+        .sfm-social:after {
+            color: #000000;
+        }
+
+        #sfm-sidebar .sfm-menu-level-1 li .sfm-sm-indicator i,
+        #sfm-sidebar .sfm-menu-level-1 .sfm-sl {
+            color: #000000;
+        }
+
+        #sfm-sidebar .sfm-menu-level-2 li .sfm-sm-indicator i,
+        #sfm-sidebar .sfm-menu-level-2 .sfm-sl {
+            color: #aaaaaa;
+        }
+
+        #sfm-sidebar .sfm-menu-level-3 li .sfm-sm-indicator i,
+        #sfm-sidebar .sfm-menu-level-3 .sfm-sl {
+            color: #aaaaaa;
+        }
+
+        .sfm-menu-level-0 .sfm-chapter {
+            color: #00FFB8 !important;
+        }
+
+        .sfm-menu-level-1 .sfm-chapter {
+            color: #FFFFFF !important;
+        }
+
+        .sfm-menu-level-2 .sfm-chapter {
+            color: #FFFFFF !important;
+        }
+
+        .sfm-menu-level-3 .sfm-chapter {
+            color: #FFFFFF !important;
+        }
+
+        #sfm-sidebar .sfm-view-level-1 li a,
+        #sfm-sidebar .sfm-menu-level-1 li a {
+            color: #000000;
+            border-color: #000000;
+        }
+
+        #sfm-sidebar:after {
+            background-color: #ffffff;
+        }
+
+        #sfm-sidebar .sfm-view-level-2 li a,
+        #sfm-sidebar .sfm-menu-level-2 li a {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        #sfm-sidebar .sfm-view-level-3 li a,
+        #sfm-sidebar .sfm-menu-level-3 li a {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .sfm-navicon-button {
+            top: 0px;
+        }
+
+        .sfm-mobile .sfm-navicon-button {
+            top: 0px;
+        }
+
+        .sfm-navicon-button {
+            left: 0px !important;
+            ;
+        }
+
+        .sfm-mobile .sfm-navicon-button {
+            left: inherit;
+        }
+
+        .sfm-no-mobile.sfm-pos-left.sfm-bar body,
+        .sfm-no-mobile.sfm-pos-left.sfm-bar #wpadminbar {
+            padding-left: 275px !important;
+        }
+
+        .sfm-no-mobile.sfm-pos-right.sfm-bar body,
+        .sfm-no-mobile.sfm-pos-right.sfm-bar #wpadminbar {
+            padding-right: 275px !important;
+        }
+
+        .sfm-navicon:after,
+        .sfm-label-text .sfm-navicon:after,
+        .sfm-label-none .sfm-navicon:after {
+            top: -8px;
+        }
+
+        .sfm-navicon:before,
+        .sfm-label-text .sfm-navicon:before,
+        .sfm-label-none .sfm-navicon:before {
+            top: 8px;
+        }
+
+        .sfm-body-pushed #sfm-overlay,
+        body[class*="sfm-view-pushed"] #sfm-overlay {
+            opacity: 0.6;
+        }
+
+        .sfm-body-pushed #sfm-overlay,
+        body[class*="sfm-view-pushed"] #sfm-overlay {
+            cursor: url("https://libraryforall.org/wp-content/plugins/superfly-menu/img/close3.png") 16 16, pointer;
+        }
+
+        .sfm-style-skew #sfm-sidebar .sfm-social {
+            height: auto;
+            /*min-height: 75px;*/
+        }
+
+        .sfm-style-skew #sfm-sidebar .sfm-menu-level-0 li:hover,
+        .sfm-style-skew #sfm-sidebar .sfm-menu-level-0 li a:hover {
+            color: #00FFB8;
+        }
+
+        .sfm-theme-top .sfm-sidebar-bg,
+        .sfm-theme-bottom .sfm-sidebar-bg {
+            width: 550px;
+        }
+
+        /* Pos left */
+        .sfm-theme-top .sfm-sidebar-bg {
+            -webkit-transform: translate3d(-275px, 0, 0) skewX(-20.65deg);
+            -moz-transform: translate3d(-275px, 0, 0) skewX(-20.65deg);
+            -ms-transform: translate3d(-275px, 0, 0) skewX(-20.65deg);
+            -o-transform: translate3d(-275px, 0, 0) skewX(-20.65deg);
+            transform: translate3d(-275px, 0, 0) skewX(-20.65deg);
+        }
+
+        .sfm-theme-bottom .sfm-sidebar-bg {
+            -webkit-transform: translate3d(-550px, 0, 0) skewX(20.65deg);
+            -moz-transform: translate3d(-550px, 0, 0) skewX(20.65deg);
+            -ms-transform: translate3d(-550px, 0, 0) skewX(20.65deg);
+            -o-transform: translate3d(-550px, 0, 0) skewX(20.65deg);
+            transform: translate3d(-275px, 0, 0) skewX(20.65deg);
+        }
+
+        /* Pos right */
+        .sfm-pos-right .sfm-theme-top .sfm-sidebar-bg {
+            -webkit-transform: translate3d(-0px, 0, 0) skewX(20.65deg);
+            -moz-transform: translate3d(-0px, 0, 0) skewX(20.65deg);
+            -ms-transform: translate3d(-0px, 0, 0) skewX(20.65deg);
+            -o-transform: translate3d(-0px, 0, 0) skewX(20.65deg);
+            transform: translate3d(-0px, 0, 0) skewX(20.65deg);
+        }
+
+        .sfm-pos-right .sfm-theme-bottom .sfm-sidebar-bg {
+            -webkit-transform: translate3d(-0px, 0, 0) skewX(-20.65deg);
+            -moz-transform: translate3d(-0px, 0, 0) skewX(-20.65deg);
+            -ms-transform: translate3d(-0px, 0, 0) skewX(-20.65deg);
+            -o-transform: translate3d(-0px, 0, 0) skewX(-20.65deg);
+            transform: translate3d(-0px, 0, 0) skewX(-20.65deg);
+        }
+
+        .sfm-sidebar-exposed.sfm-theme-top .sfm-sidebar-bg,
+        .sfm-sidebar-always .sfm-theme-top .sfm-sidebar-bg {
+            -webkit-transform: translate3d(-141.5px, 0, 0) skewX(-20.65deg);
+            -moz-transform: translate3d(-141.5px, 0, 0) skewX(-20.65deg);
+            -ms-transform: translate3d(-141.5px, 0, 0) skewX(-20.65deg);
+            -o-transform: translate3d(-141.5px, 0, 0) skewX(-20.65deg);
+            transform: translate3d(-141.5px, 0, 0) skewX(-20.65deg);
+        }
+
+        .sfm-pos-right .sfm-sidebar-exposed.sfm-theme-top .sfm-sidebar-bg,
+        .sfm-pos-right .sfm-sidebar-always .sfm-theme-top .sfm-sidebar-bg {
+            -webkit-transform: translate3d(-275px, 0, 0) skewX(20.65deg);
+            -moz-transform: translate3d(-275px, 0, 0) skewX(20.65deg);
+            -ms-transform: translate3d(-275px, 0, 0) skewX(20.65deg);
+            -o-transform: translate3d(-275px, 0, 0) skewX(20.65deg);
+            transform: translate3d(-137.5px, 0, 0) skewX(20.65deg);
+        }
+
+        .sfm-sidebar-exposed.sfm-theme-bottom .sfm-sidebar-bg,
+        .sfm-sidebar-always .sfm-theme-bottom .sfm-sidebar-bg {
+            -webkit-transform: translate3d(0, 0, 0) skewX(20.65deg);
+            -moz-transform: translate3d(0, 0, 0) skewX(20.65deg);
+            -ms-transform: translate3d(0, 0, 0) skewX(20.65deg);
+            -o-transform: translate3d(0, 0, 0) skewX(20.65deg);
+            transform: translate3d(0, 0, 0) skewX(20.65deg);
+        }
+
+        .sfm-pos-right .sfm-sidebar-exposed.sfm-theme-bottom .sfm-sidebar-bg,
+        .sfm-pos-right .sfm-sidebar-always .sfm-theme-bottom .sfm-sidebar-bg {
+            -webkit-transform: translate3d(-279px, 0, 0) skewX(-20.65deg);
+            -moz-transform: translate3d(-279px, 0, 0) skewX(-20.65deg);
+            -ms-transform: translate3d(-279px, 0, 0) skewX(-20.65deg);
+            -o-transform: translate3d(-279px, 0, 0) skewX(-20.65deg);
+            transform: translate3d(-279px, 0, 0) skewX(-20.65deg);
+        }
+
+        /* Always visible */
+        .sfm-sidebar-always.sfm-theme-top .sfm-sidebar-bg {
+            -webkit-transform: skewX(-20.65deg);
+            -moz-transform: skewX(-20.65deg);
+            -ms-transform: skewX(-20.65deg);
+            -o-transform: skewX(-20.65deg);
+            transform: skewX(-20.65deg);
+        }
+
+        .sfm-pos-right .sfm-sidebar-always.sfm-theme-top .sfm-sidebar-bg {
+            -webkit-transform: skewX(20.65deg);
+            -moz-transform: skewX(20.65deg);
+            -ms-transform: skewX(20.65deg);
+            -o-transform: skewX(20.65deg);
+            transform: skewX(20.65deg);
+        }
+
+        .sfm-sidebar-always.sfm-theme-bottom .sfm-sidebar-bg {
+            -webkit-transform: skewX(-160.65deg);
+            -moz-transform: skewX(-160.65deg);
+            -ms-transform: skewX(-160.65deg);
+            -o-transform: skewX(-160.65deg);
+            transform: skewX(-160.65deg);
+        }
+
+        .sfm-pos-right .sfm-sidebar-always.sfm-theme-bottom .sfm-sidebar-bg {
+            -webkit-transform: skewX(160.65deg);
+            -moz-transform: skewX(160.65deg);
+            -ms-transform: skewX(160.65deg);
+            -o-transform: skewX(160.65deg);
+            transform: skewX(160.65deg);
+        }
+
+        .sfm-navicon,
+        .sfm-navicon:after,
+        .sfm-navicon:before,
+        .sfm-label-metro .sfm-navicon-button,
+        #sfm-mob-navbar {
+            background-color: #000000;
+        }
+
+        .sfm-label-metro .sfm-navicon,
+        #sfm-mob-navbar .sfm-navicon,
+        .sfm-label-metro .sfm-navicon:after,
+        #sfm-mob-navbar .sfm-navicon:after,
+        .sfm-label-metro .sfm-navicon:before,
+        #sfm-mob-navbar .sfm-navicon:before {
+            background-color: #ffffff;
+        }
+
+        .sfm-navicon-button .sf_label_icon {
+            color: #ffffff;
+        }
+
+        .sfm-label-square .sfm-navicon-button,
+        .sfm-label-rsquare .sfm-navicon-button,
+        .sfm-label-circle .sfm-navicon-button {
+            color: #000000;
+        }
+
+        .sfm-navicon-button .sf_label_icon {
+            width: 53px;
+            height: 53px;
+            font-size: calc(53px * .6);
+        }
+
+        .sfm-navicon-button .sf_label_icon.la_icon_manager_custom {
+            width: 53px;
+            height: 53px;
+        }
+
+        .sfm-navicon-button.sf_label_default {
+            width: 53px;
+            height: 53px;
+        }
+
+        #sfm-sidebar [class*="sfm-icon-"] {
+            color: #aaaaaa;
+        }
+
+        #sfm-sidebar .sfm-social li {
+            border-color: #aaaaaa;
+        }
+
+        #sfm-sidebar .sfm-social a {
+            color: #aaaaaa;
+        }
+
+        #sfm-sidebar .sfm-search-form {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        #sfm-sidebar li:hover span[class*='fa-'] {
+            opacity: 1 !important;
+        }
+    </style>
+    <link rel="icon"
+        href="https://libraryforall.org/wp-content/uploads/2025/04/cropped-Library-for-All-Logos-UPDATED-2021-22-32x32.png"
+        sizes="32x32" />
+    <link rel="icon"
+        href="https://libraryforall.org/wp-content/uploads/2025/04/cropped-Library-for-All-Logos-UPDATED-2021-22-192x192.png"
+        sizes="192x192" />
+    <link rel="apple-touch-icon"
+        href="https://libraryforall.org/wp-content/uploads/2025/04/cropped-Library-for-All-Logos-UPDATED-2021-22-180x180.png" />
+    <meta name="msapplication-TileImage"
+        content="https://libraryforall.org/wp-content/uploads/2025/04/cropped-Library-for-All-Logos-UPDATED-2021-22-270x270.png" />
+    <style type="text/css" id="wp-custom-css">
+        .wp-pagenavi span.pages {
+            display: none;
+        }
+
+        div#gform_1_validation_container {
+            display: none;
+        }
+
+        .gfield_description.validation_message.gfield_validation_message {
+            display: none;
+        }
+
+        .single-news-intro-banner .breadcrumb-list>span:not(:last-child):after {
+            display: none;
         }
     </style>
 </head>
 
-<body>
-
-    <div class="center logo">
-        <svg width=60 height=60 viewBox="0 0 100 100">
-            <circle cx=50 cy=50 r=48 fill=#00B2A9></circle>
-            <path d="M30 70V30H40V60H65V70H30Z" fill=#fff></path>
-            <rect x=55 y=30 width=15 height=15 rx=2 fill=#F26522></rect>
-        </svg>
-        <h1>Library For All</h1>
-        <div class=subtitle>Knowledge is for everyone</div>
-    </div>
-
-    <div class=card>
-        <div class=topbar></div>
-        <div class=form>
-            <h2>Sign in to your account</h2>
-            <form id=loginForm>
-                <input class=input type=email required placeholder="you@example.com">
-                <input class=input type=password required placeholder="••••••••">
-                <div class=row><input type=checkbox style="margin-right:8px">Remember this device</div>
-                <button class=btn>Sign In</button>
-            </form>
+<body class="home wp-singular page-template-default page page-id-9 wp-theme-libraryforalltheme">
+    <!-- Google Tag Manager (noscript) --> <noscript><iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-T5ZD252F" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
+    <header class="site-main-header"> <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg p-0">
+            <div class="container">
+                <div class="site-logo-box"> <a class="navbar-brand p-0" href="https://libraryforall.org"> <img
+                            src="https://libraryforall.org/wp-content/uploads/2025/04/Library-for-All-Logos-UPDATED-2021-25.png"
+                            alt="" class=""> </a></div>
+                <div class="responsive-menubar-items"> <button class="navbar-toggler collapsed" type="button"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"> <span
+                            class="navbar-toggler-icon"></span> </button></div>
+                <div class="header-right">
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul id="menu-main-menu" class="navbar-nav me-0 ms-auto mb-2 mb-lg-0">
+                            <li
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-204 nav-item">
+                                <a href="https://libraryforall.org/why-education/" class="nav-link">Collections</a>
+                                <ul class="sub-menu">
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526 nav-item">
+                                        <a href="https://libraryforall.org/why-education/education-in-emergencies/"
+                                            class="nav-link">Education in Emergencies</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1979 nav-item">
+                                        <a href="https://libraryforall.org/why-education/climate-and-disasters/"
+                                            class="nav-link">Climate &#038; Disasters</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2495 nav-item">
+                                        <a href="https://libraryforall.org/why-education/gender-inclusion/"
+                                            class="nav-link">Gender &#038; Inclusion</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2496 nav-item">
+                                        <a href="https://libraryforall.org/why-education/mental-psychosocial-health/"
+                                            class="nav-link">Mental Health &#038; Psychosocial Support</a></li>
+                                </ul>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-535 nav-item">
+                                <a href="https://libraryforall.org/solutions/" class="nav-link">Solutions</a>
+                                <ul class="sub-menu">
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-705 nav-item">
+                                        <a href="https://libraryforall.org/solutions/books/" class="nav-link">Books</a>
+                                    </li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6804 nav-item">
+                                        <a href="https://libraryforall.org/solutions/mobile-apps/"
+                                            class="nav-link">Mobile Reader Apps</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-534 nav-item">
+                                        <a href="https://libraryforall.org/solutions/writers-workshops/"
+                                            class="nav-link">Writers Workshops</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-702 nav-item">
+                                        <a href="https://libraryforall.org/solutions/spark/" class="nav-link">Spark
+                                            Box</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-788 nav-item">
+                                        <a href="https://libraryforall.org/solutions/elevate-app/"
+                                            class="nav-link">Elevate App</a></li>
+                                </ul>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-939 nav-item">
+                                <a href="https://libraryforall.org/impact/" class="nav-link">Programs</a>
+                                <ul class="sub-menu">
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4500 nav-item">
+                                        <a href="https://libraryforall.org/impact/australia-our-yarning/"
+                                            class="nav-link">Australia – Our Yarning</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-940 nav-item">
+                                        <a href="https://libraryforall.org/impact/pacific/" class="nav-link">Pacific</a>
+                                    </li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4501 nav-item">
+                                        <a href="https://libraryforall.org/impact/asia/" class="nav-link">Asia</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4112 nav-item">
+                                        <a href="https://libraryforall.org/impact/africa/" class="nav-link">Africa</a>
+                                    </li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2675 nav-item">
+                                        <a href="https://libraryforall.org/impact/ukraine-response/"
+                                            class="nav-link">Ukraine Response</a></li>
+                                </ul>
+                            </li>
+                            <li
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-948 nav-item">
+                                <a href="https://libraryforall.org/about-us/" class="nav-link">About Us</a>
+                                <ul class="sub-menu">
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1982 nav-item">
+                                        <a href="https://libraryforall.org/contact/" class="nav-link">Contact</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4643 nav-item">
+                                        <a href="https://libraryforall.org/about-us/news-research/"
+                                            class="nav-link">Stories &#038; News</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-981 nav-item">
+                                        <a href="https://libraryforall.org/about-us/partners/" class="nav-link">Partner
+                                            With Us</a></li>
+                                    <li
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-979 nav-item">
+                                        <a href="https://libraryforall.org/about-us/reports/"
+                                            class="nav-link">Reports</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6703 nav-item">
+                                <a href="https://libraryforallshop.org/" class="nav-link">Book Store</a></li>
+                            <li
+                                class="nav-btn menu-item menu-item-type-post_type menu-item-object-page menu-item-1174 nav-item">
+                                <a href="https://libraryforall.org/donate/" class="nav-link">Donate</a></li>
+                        </ul>
+                    </div>
+                    <div class="search-btn-box d-lg-block d-none"> <span class="btn-search"><img
+                                src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/search-icon.svg"
+                                alt=""></span></div>
+                    <div class="search-form">
+                        <form action="https://libraryforall.org" method="get">
+                            <div class="form-group"> <input type="text" name="s" placeholder="Type your search"
+                                    value=""></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Login Section -->
+    <section class="login-wrapper" style="min-height: 70vh; display: flex; align-items: center; padding: 60px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-7">
+                    <div class="login-card" style="background: white; border-radius: 15px; padding: 50px 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+                        <div class="text-center mb-4">
+                            <h2 style="color: #333; font-weight: 700; margin-bottom: 10px;">Welcome Back</h2>
+                            <p style="color: #666; font-size: 16px;">Login to access your account</p>
+                        </div>
+                        
+                        <form action="#" method="post" class="login-form">
+                            <div class="form-group mb-4">
+                                <label for="email" style="color: #333; font-weight: 600; margin-bottom: 8px; display: block;">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required 
+                                       style="padding: 12px 20px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px; transition: all 0.3s;">
+                            </div>
+                            
+                            <div class="form-group mb-4">
+                                <label for="password" style="color: #333; font-weight: 600; margin-bottom: 8px; display: block;">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required 
+                                       style="padding: 12px 20px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px; transition: all 0.3s;">
+                            </div>
+                            
+                            <div class="form-group mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+                                <div class="form-check">
+                                    <input type="checkbox" id="remember" name="remember" class="form-check-input">
+                                    <label for="remember" class="form-check-label" style="color: #666; font-size: 14px; margin-left: 5px;">Remember me</label>
+                                </div>
+                                <a href="#" style="color: #667eea; font-size: 14px; text-decoration: none; font-weight: 500;">Forgot Password?</a>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-100" 
+                                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; padding: 14px; border-radius: 8px; color: white; font-weight: 600; font-size: 16px; transition: all 0.3s; cursor: pointer;">
+                                Login
+                            </button>
+                            
+                            <div class="text-center mt-4">
+                                <p style="color: #666; font-size: 14px;">Don't have an account? <a href="#" style="color: #667eea; text-decoration: none; font-weight: 600;">Sign Up</a></p>
+                            </div>
+                            
+                            <div class="divider" style="display: flex; align-items: center; text-align: center; margin: 30px 0;">
+                                <div style="flex: 1; border-bottom: 1px solid #e0e0e0;"></div>
+                                <span style="padding: 0 15px; color: #999; font-size: 14px;">OR</span>
+                                <div style="flex: 1; border-bottom: 1px solid #e0e0e0;"></div>
+                            </div>
+                            
+                            <div class="social-login">
+                                <button type="button" class="btn btn-outline w-100 mb-3" 
+                                        style="border: 2px solid #e0e0e0; background: white; padding: 12px; border-radius: 8px; color: #333; font-weight: 500; font-size: 15px; transition: all 0.3s; cursor: pointer;">
+                                    <img src="https://www.google.com/favicon.ico" alt="Google" style="width: 20px; margin-right: 10px; vertical-align: middle;">
+                                    Continue with Google
+                                </button>
+                                <button type="button" class="btn btn-outline w-100" 
+                                        style="border: 2px solid #e0e0e0; background: white; padding: 12px; border-radius: 8px; color: #333; font-weight: 500; font-size: 15px; transition: all 0.3s; cursor: pointer;">
+                                    <img src="https://www.facebook.com/favicon.ico" alt="Facebook" style="width: 20px; margin-right: 10px; vertical-align: middle;">
+                                    Continue with Facebook
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+    
+    <style>
+        .login-wrapper input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .login-wrapper button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .login-wrapper .btn-outline:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+    </style>
+    <p></p>
+    <footer class="site-main-footer">
+        <div class="shape-collection-outer">
+            <div class="container">
+                <div class="shape-collection"> <img
+                        src="https://libraryforall.org/wp-content/uploads/2023/09/footer-shape-collection.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <section class="flag-representation-box">
+            <div class="container">
+                <div class="flag-data-box">
+                    <div class="flag-list">
+                        <div class="flag-single"> <img
+                                src="https://libraryforall.org/wp-content/uploads/2023/09/aboriginal-flag.png" alt="">
+                        </div>
+                        <div class="flag-single"> <img
+                                src="https://libraryforall.org/wp-content/uploads/2023/09/torres-flag.png" alt=""></div>
+                    </div>
+                    <div class="flag-text">
+                        <p><em>Library For All operates across the world with our base operations in Australia. We
+                                acknowledge the Traditional Custodians of Country throughout Australia and the
+                                continuation of cultural, spiritual, and educational practices of Aboriginal and Torres
+                                Strait Islander peoples. We pay our respect to Elders past and present and extend that
+                                respect to all Aboriginal and Torres Strait Islander peoples today.</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer-theme-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <div class="logo-box">
+                            <div class="logo"> <a href="https://libraryforall.org"> <img
+                                        src="https://libraryforall.org/wp-content/uploads/2025/04/Library-for-All-Logos-UPDATED-2021-24.png"
+                                    <h1>40%</h1>
+                                    <p>Of the global population can’t access education in a language they understand
+                                        <br><a
+                                            href="https://www.unesco.org/gem-report/en/articles/40-dont-access-education-language-they-understand?TSPD_101_R0=080713870fab20000f70b7f6922bf302b6cad2409dba49e28f7e709ef94448c1365a427dcc3a1fb708ab557ff314300097195aea25c145a8193e57afd5478b809e3b7f7d1853ae29db3a619029e8f7101679546f9d993cd14c68b1c329134b9d#:~:text=Paris%2C%2019%20February%20%2D%20A%20new,in%20a%20language%20they%20understand"
+                                            target=”_blank”>[1] UNESCO</a></p>
+                                </div>
+                            </div>
+                            <div class="single-list">
+                                <div class="icon"> <img decoding="async" class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        data-src="https://libraryforall.org/wp-content/uploads/2023/10/People-Icon-red.svg"
+                                        alt=""><noscript><img decoding="async" class="lazyload"
+                                            src="https://libraryforall.org/wp-content/uploads/2023/10/People-Icon-red.svg"
+                                            alt=""></noscript></div>
+                                <div class="list-text">
+                                    <h1>8/10</h1>
+                                    <p>children are <b>not</b> learning<br> <a
+                                            href="https://www.worldbank.org/en/news/press-release/2022/06/23/70-of-10-year-olds-now-in-learning-poverty-unable-to-read-and-understand-a-simple-text"
+                                            target=”_blank”>[2] World Bank</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shape-left"> <img decoding="async" class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="https://libraryforall.org/wp-content/uploads/2023/09/outline-block-placeholder-icon.svg"
+                                alt=""><noscript><img decoding="async" class="lazyload"
+                                    src="https://libraryforall.org/wp-content/uploads/2023/09/outline-block-placeholder-icon.svg"
+                                    alt=""></noscript></div>
+                        <div class="shape-right"> <img decoding="async" class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="https://libraryforall.org/wp-content/uploads/2023/09/content-tri-tag.svg"
+                                alt=""><noscript><img decoding="async" class="lazyload"
+                                    src="https://libraryforall.org/wp-content/uploads/2023/09/content-tri-tag.svg"
+                                    alt=""></noscript></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 order-1 order-lg-2">
+                    <div class="content">
+                        <h6>WHY WE EXIST</h6>
+                        <h2>Because literacy is foundational learning, and every child deserves the chance to thrive.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="icon-text-grids-block " id="block_f560437514fd2625f1531320c7fbd39c">
+        <div class="container">
+            <div class="section-title">
+                <h2>What we do</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="grid-single dynamic-grid-tangerine">
+                        <div class="icon"> <img decoding="async" class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="https://libraryforall.org/wp-content/uploads/2023/09/content-icon.svg"
+                                alt=""><noscript><img decoding="async" class="lazyload"
+                                    src="https://libraryforall.org/wp-content/uploads/2023/09/content-icon.svg"
+                                    alt=""></noscript></div>
+                        <div class="text">
+                            <h4>Libraries</h4>
+                            <p><span style="font-weight: 400;">We co-develop library collections that are geographically
+                                    and culturally relevant, as well as scalable, including for: </span><a
+                                    href="https://libraryforall.org/why-education/education-in-emergencies/"><strong>Education
+                                        in Emergencies</strong></a><span style="font-weight: 400;">, <strong><a
+                                            href="https://libraryforall.org/why-education/gender-disability/">Inclusive
+                                            Education </a></strong></span><span style="font-weight: 400;">and <strong><a
+                                            href="https://libraryforall.org/why-education/mental-psychosocial-health/">Social
+                                            and Emotional Learning.</a></strong></span></p>
+                            <div class="grid-btn"> <a href="https://libraryforall.org/why-education/" target="_blank"
+                                    class="btn-default">FIND OUT MORE</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="grid-single ">
+                        <div class="icon"> <img decoding="async" class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="https://libraryforall.org/wp-content/uploads/2023/09/innovative-icon.svg"
+                                alt=""><noscript><img decoding="async" class="lazyload"
+                                    src="https://libraryforall.org/wp-content/uploads/2023/09/innovative-icon.svg"
+                                    alt=""></noscript></div>
+                        <div class="text">
+                            <h4>Solutions</h4>
+                            <p>From printed collections to digital apps and products, our libraries are tailored for
+                                every project. Stories are locally informed, translated and adapted, centering lived
+                                experience and designed to support foundational learning.</p>
+                            <div class="grid-btn"> <a href="https://libraryforall.org/solutions/" target="_blank"
+                                    class="btn-default">FIND OUT MORE</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="grid-single dynamic-grid-sky">
+                        <div class="icon"> <img decoding="async" class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="https://libraryforall.org/wp-content/uploads/2023/09/community-icon.svg"
+                                alt=""><noscript><img decoding="async" class="lazyload"
+                                    src="https://libraryforall.org/wp-content/uploads/2023/09/community-icon.svg"
+                                    alt=""></noscript></div>
+                        <div class="text">
+                            <h4>Impact</h4>
+                            <p data-start="867" data-end="1104">We work globally, with each project grounded in cultural
+                                meaning. Stories are created with local authors and illustrators, and delivered through
+                                a mix of formats—ensuring impact is meaningful, scalable, and sustainable.</p>
+                            <div class="grid-btn"> <a href="https://libraryforall.org/impact/" target="_blank"
+                                    class="btn-default">FIND OUT MORE</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="two-column-image-content-boxes-wrapper     " id="block_7233a2773c3cf4cba3a0f8614fe8f2e3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="image-shape-box text-center">
+                        <div class="image"> <img decoding="async" class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="https://libraryforall.org/wp-content/uploads/2023/10/Climate-Disasters-Collection-Slides.png"
+                                alt=""><noscript><img decoding="async" class="lazyload"
+                                    src="https://libraryforall.org/wp-content/uploads/2023/10/Climate-Disasters-Collection-Slides.png"
+                                    alt=""></noscript></div>
+                    </div>
+                    <div class="middle-image-content-boxes">
+                        <div class="image"> <img decoding="async" class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="https://libraryforall.org/wp-content/uploads/2023/10/Climate-Disasters-Collection-Slides.png"
+                                alt=""><noscript><img decoding="async" class="lazyload"
+                                    src="https://libraryforall.org/wp-content/uploads/2023/10/Climate-Disasters-Collection-Slides.png"
+                                    alt=""></noscript></div>
+                        <div class="shape d-lg-none text-end"> <img decoding="async" class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/breakpoint-arrow-bottom.svg"
+                                alt=""><noscript><img decoding="async" class="lazyload"
+                                    src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/breakpoint-arrow-bottom.svg"
+                                    alt=""></noscript></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-box">
+                        <h6 class="text-uppercase">OUR LIBRARIES</h6>
+                        <h3>Books created with communities, for children everywhere</h3>
+                        <p class="" data-start="120" data-end="503">We work alongside partners, local authors,
+                            illustrators and translators to build inclusive collections that support literacy.</p>
+                        <p class="" data-start="505" data-end="641">Available in both print and digital formats, our
+                            books are made to be shared in classrooms, homes and community spaces around the world.</p>
+                        <div class="block-btn"> <a href="https://libraryforall.org/solutions/books/" target=""
+                                class="btn-default btn-black">SEARCH OUR COLLECTIONS</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- Impact Stories -->
+    <section class="global-stories-grid-block  " id="block_2c470421172473de18af017809b512cf">
+        <div class="container">
+            <div class="section-title-outer flex-lg-title">
+                <div class="section-title title-styled">
+                    <h2>Impact Stories<span></span></h2>
+                </div>
+            </div>
+            <div class="story-grids-row">
+                <div class="row case-and-impact-story-row">
+                    <div id="ajax-load-more"
+                        class="ajax-load-more-wrap infinite classic alm-paging paging-default alm-layouts"
+                        data-alm-id="" data-canonical-url="https://libraryforall.org/" data-slug="home" data-post-id="0"
+                        data-localized="ajax_load_more_vars" data-alm-object="ajax_load_more">
+                        <style type="text/css">
+                            .alm-layouts .alm-listing.flex .alm-layout.alm-2-col,
+                            .alm-layouts .alm-listing.flex .alm-layout.alm-3-col,
+                            .alm-layouts .alm-listing.flex .alm-layout.alm-4-col {
+                                width: 48%;
+                                display: inline-block;
+                                vertical-align: top;
+                                clear: none
+                            }
+
+                            .alm-layouts .alm-listing.flex .alm-2-col.odd {
+                                margin-right: 4%
+                            }
+
+                            .alm-layouts .alm-listing.flex .alm-layout.alm-2-col.alm-gallery {
+                                width: 50%;
+                                margin: 0
+                            }
+
+                            .alm-layouts .alm-listing.flex .alm-layout.alm-3-col,
+                            .alm-layouts .alm-listing.flex .alm-layout.alm-4-col {
+                                width: 30.6333%;
+                                margin-right: 4%;
+
+                                &.last {
+                                    margin-right: 0
+                                }
+                            }
+
+                            .alm-layouts .alm-listing.flex .alm-layout.alm-4-col {
+                                width: 21.9333%
+                            }
+
+                            .alm-layouts .alm-listing.flex .alm-layout.alm-3-col.alm-gallery,
+                            .alm-layouts .alm-listing.flex .alm-layout.alm-4-col.alm-gallery {
+                                width: 33.333%;
+                                margin: 0
+                            }
+
+                            .alm-layouts .alm-listing.flex .alm-layout.alm-4-col.alm-gallery {
+                                width: 25%
+                            }
+
+                            .alm-layouts .alm-listing.flex .alm-default.alm-2-col {
+                                padding-left: 106px;
+                                min-height: 100px
+                            }
+
+                            .alm-layouts .alm-listing.flex .alm-default.alm-2-col img {
+                                max-width: 85px
+                            }
+
+                            .alm-layouts .alm-listing.flex .alm-default.alm-3-col,
+                            .alm-layouts .alm-listing.flex .alm-default.alm-4-col {
+                                padding-left: 80px;
+                                min-height: 100px
+                            }
+
+                            .alm-layouts .alm-listing.flex .alm-default.alm-3-col img,
+                            .alm-layouts .alm-listing.flex .alm-default.alm-4-col img {
+                                max-width: 65px
+                            }
+
+                            .alm-layouts .alm-listing.flex,
+                            .alm-layouts .alm-listing.flex .alm-reveal {
+                                display: flex;
+                                flex-wrap: wrap
+                            }
+
+                            @media screen and (max-width:1024px) {
+
+                                .alm-layouts .alm-listing.flex .alm-layout.alm-3-col.alm-gallery,
+                                .alm-layouts .alm-listing.flex .alm-layout.alm-4-col.alm-gallery {
+                                    width: 50%
+                                }
+
+                                .alm-layouts .alm-listing.flex .alm-layout.alm-4-col {
+                                    width: 48%;
+                                    margin-right: 4%;
+
+                                    &:nth-child(2n) {
+                                        margin-right: 0
+                                    }
+                                }
+                            }
+
+                            @media screen and (max-width:768px) {
+
+                                .alm-layouts .alm-listing.flex,
+                                .alm-layouts .alm-listing.flex .alm-reveal {
+                                    display: block
+                                }
+
+                                .alm-layouts .alm-listing.flex .alm-layout.alm-2-col,
+                                .alm-layouts .alm-listing.flex .alm-layout.alm-3-col,
+                                .alm-layouts .alm-listing.flex .alm-layout.alm-4-col {
+                                    width: 100%;
+                                    display: block;
+                                    margin-left: 0;
+                                    margin-right: 0
+                                }
+
+                                .alm-layouts .alm-listing.flex .alm-layout.alm-2-col.odd,
+                                .alm-layouts .alm-listing.flex .alm-layout.alm-3-col.last,
+                                .alm-layouts .alm-listing.flex .alm-layout.alm-4-col.last {
+                                    margin-right: 0
+                                }
+                            }
+
+                            .alm-layouts .alm-listing {
+                                margin: 0;
+                                padding: 0
+                            }
+
+                            .alm-layouts .alm-listing .alm-layout {
+                                width: 100%;
+                                display: block;
+                                clear: both;
+                                padding: 0;
+                                margin: 0;
+                                overflow: visible;
+                                list-style: none
+                            }
+
+                            .alm-layouts .alm-listing .alm-layout,
+                            .alm-layouts .alm-listing .alm-layout * {
+                                -webkit-box-sizing: border-box;
+                                box-sizing: border-box
+                            }
+
+                            .alm-layouts .alm-listing .alm-layout a,
+                            .alm-layouts .alm-listing .alm-layout img {
+                                -webkit-box-shadow: none;
+                                box-shadow: none;
+                                border: none
+                            }
+
+                            .alm-layouts .alm-listing .alm-layout img {
+                                position: static;
+                                max-width: 100%;
+                                height: auto;
+                                clear: both;
+                                margin: 0;
+                                -webkit-border-radius: 0;
+                                border-radius: 0;
+                                display: block
+                            }
+
+                            .alm-layouts .alm-listing .alm-layout h3 {
+                                font-size: 22px;
+                                line-height: 1.15;
+                                font-weight: 600;
+                                margin: 0 0 10px;
+                                padding: 0
+                            }
+
+                            .alm-layouts .alm-listing .alm-layout h3 a {
+                                text-decoration: none
+                            }
+
+                            .alm-layouts .alm-listing .alm-layout h3 a:focus,
+                            .alm-layouts .alm-listing .alm-layout h3 a:hover {
+                                text-decoration: underline
+                            }
+
+                            .alm-layouts .alm-listing .alm-layout p.entry-meta {
+                                font-size: 15px;
+                                opacity: .7;
+                                margin: 0 0 10px
+                            }
+
+                            .alm-layouts .alm-listing .alm-layout p {
+                                font-size: 15px;
+                                line-height: 1.5;
+                                margin: 0 0 1em
+                            }
+
+                            .alm-layouts .alm-grid {
+                                margin-bottom: 20px
+                            }
+
+                            .alm-layouts .alm-grid.alm-has-transition {
+                                margin-bottom: 0
+                            }
+
+                            .alm-layouts .alm-grid+.alm-btn-wrap {
+                                padding-top: 0
+                            }
+
+                            .alm-layouts .alm-grid.alm-no-transition,
+                            .alm-layouts.alm-paging .alm-grid.alm-has-transition .alm-paging-content,
+                            .alm-layouts:not(.alm-paging) .alm-grid.alm-has-transition .alm-reveal {
+                                display: grid;
+                                grid-template-columns: repeat(1, minmax(0, 1fr));
+                                gap: 20px
+                            }
+
+                            .alm-layouts .alm-grid.alm-no-transition:after,
+                            .alm-layouts.alm-paging .alm-grid.alm-has-transition .alm-paging-content:after,
+                            .alm-layouts:not(.alm-paging) .alm-grid.alm-has-transition .alm-reveal:after {
+                                display: none
+                            }
+
+                            .alm-layouts .alm-grid.alm-has-transition .alm-reveal {
+                                margin-bottom: 20px
+                            }
+
+                            .alm-layouts .alm-grid.alm-has-transition .alm-reveal:empty {
+                                display: none !important
+                            }
+
+                            .alm-layouts .alm-grid.alm-grid-gap-none.alm-has-transition .alm-reveal {
+                                margin-bottom: 0
+                            }
+
+                            .alm-layouts .alm-grid.alm-grid-gap-sm.alm-has-transition .alm-reveal {
+                                margin-bottom: 5px
+                            }
+
+                            .alm-layouts .alm-grid.alm-grid-gap-md.alm-has-transition .alm-reveal {
+                                margin-bottom: 10px
+                            }
+
+                            .alm-layouts .alm-grid.alm-grid-gap-none,
+                            .alm-layouts.alm-paging .alm-grid.alm-grid-gap-none .alm-paging-content,
+                            .alm-layouts:not(.alm-paging) .alm-grid.alm-grid-gap-none .alm-reveal {
+                                gap: 0
+                            }
+
+                            .alm-layouts .alm-grid.alm-grid-gap-md,
+                            .alm-layouts.alm-paging .alm-grid.alm-grid-gap-md .alm-paging-content,
+                            .alm-layouts:not(.alm-paging) .alm-grid.alm-grid-gap-md .alm-reveal {
+                                gap: 10px
+                            }
+
+                            .alm-layouts .alm-grid.alm-grid-gap-sm,
+                            .alm-layouts.alm-paging .alm-grid.alm-grid-gap-sm .alm-paging-content,
+                            .alm-layouts:not(.alm-paging) .alm-grid.alm-grid-gap-sm .alm-reveal {
+                                gap: 5px
+                            }
+
+                            @media screen and (min-width:768px) {
+
+                                .alm-layouts .alm-grid.alm-grid-cols-2,
+                                .alm-layouts.alm-paging .alm-grid.alm-grid-cols-2 .alm-paging-content,
+                                .alm-layouts:not(.alm-paging) .alm-grid.alm-grid-cols-2 .alm-reveal {
+                                    grid-template-columns: repeat(2, minmax(0, 1fr))
+                                }
+                            }
+
+                            @media screen and (min-width:769px) {
+
+                                .alm-layouts .alm-grid.alm-grid-cols-3,
+                                .alm-layouts.alm-paging .alm-grid.alm-grid-cols-3 .alm-paging-content,
+                                .alm-layouts:not(.alm-paging) .alm-grid.alm-grid-cols-3 .alm-reveal {
+                                    grid-template-columns: repeat(3, minmax(0, 1fr))
+                                }
+                            }
+
+                            @media screen and (min-width:769px) {
+
+                                .alm-layouts .alm-grid.alm-grid-cols-4,
+                                .alm-layouts.alm-paging .alm-grid.alm-grid-cols-4 .alm-paging-content,
+                                .alm-layouts:not(.alm-paging) .alm-grid.alm-grid-cols-4 .alm-reveal {
+                                    grid-template-columns: repeat(2, minmax(0, 1fr))
+                                }
+                            }
+
+                            @media screen and (min-width:1025px) {
+
+                                .alm-layouts .alm-grid.alm-grid-cols-4,
+                                .alm-layouts.alm-paging .alm-grid.alm-grid-cols-4 .alm-paging-content,
+                                .alm-layouts:not(.alm-paging) .alm-grid.alm-grid-cols-4 .alm-reveal {
+                                    grid-template-columns: repeat(4, minmax(0, 1fr))
+                                }
+                            }
+
+                            @media screen and (min-width:769px) {
+
+                                .alm-layouts .alm-grid.alm-grid-cols-5,
+                                .alm-layouts.alm-paging .alm-grid.alm-grid-cols-5 .alm-paging-content,
+                                .alm-layouts:not(.alm-paging) .alm-grid.alm-grid-cols-5 .alm-reveal {
+                                    grid-template-columns: repeat(3, minmax(0, 1fr))
+                                }
+                            }
+
+                            @media screen and (min-width:1025px) {
+
+                                .alm-layouts .alm-grid.alm-grid-cols-5,
+                                .alm-layouts.alm-paging .alm-grid.alm-grid-cols-5 .alm-paging-content,
+                                .alm-layouts:not(.alm-paging) .alm-grid.alm-grid-cols-5 .alm-reveal {
+                                    grid-template-columns: repeat(5, minmax(0, 1fr))
+                                }
+                            }
+
+                            @media screen and (min-width:769px) {
+
+                                .alm-layouts .alm-grid.alm-grid-cols-6,
+                                .alm-layouts.alm-paging .alm-grid.alm-grid-cols-6 .alm-paging-content,
+                                .alm-layouts:not(.alm-paging) .alm-grid.alm-grid-cols-6 .alm-reveal {
+                                    grid-template-columns: repeat(3, minmax(0, 1fr))
+                                }
+                            }
+
+                            @media screen and (min-width:1025px) {
+
+                                .alm-layouts .alm-grid.alm-grid-cols-6,
+                                .alm-layouts.alm-paging .alm-grid.alm-grid-cols-6 .alm-paging-content,
+                                .alm-layouts:not(.alm-paging) .alm-grid.alm-grid-cols-6 .alm-reveal {
+                                    grid-template-columns: repeat(6, minmax(0, 1fr))
+                                }
+                            }
+
+                            .alm-layouts .alm-listing .alm-default {
+                                background: none;
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+                                -webkit-transition: all .35s ease;
+                                -o-transition: all .35s ease;
+                                transition: all .35s ease;
+                                min-height: auto;
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                                -ms-flex-wrap: nowrap;
+                                flex-wrap: nowrap;
+                                width: 100%
+                            }
+
+                            .alm-layouts .alm-listing .alm-default.align-items-center {
+                                -webkit-box-align: center;
+                                -ms-flex-align: center;
+                                align-items: center
+                            }
+
+                            .alm-layouts .alm-listing .alm-default.align-items-end {
+                                -webkit-box-align: end;
+                                -ms-flex-align: end;
+                                align-items: flex-end
+                            }
+
+                            .alm-layouts .alm-listing .alm-default>a,
+                            .alm-layouts .alm-listing .alm-default>img.wp-post-image {
+                                width: 150px;
+                                margin-right: 20px
+                            }
+
+                            .alm-layouts .alm-listing .alm-default>.details {
+                                -webkit-box-flex: 1;
+                                -ms-flex: 1;
+                                flex: 1
+                            }
+
+                            .alm-layouts .alm-listing .alm-default>.details :last-child {
+                                margin-bottom: 0
+                            }
+
+                            .alm-layouts .alm-listing .alm-default img {
+                                max-width: 100%;
+                                -webkit-border-radius: 3px;
+                                border-radius: 3px
+                            }
+
+                            .alm-layouts .alm-listing .alm-default p {
+                                text-align: left
+                            }
+
+                            .alm-layouts .alm-listing .alm-cta {
+                                background: none;
+                                list-style: none;
+                                padding: 0;
+                                -webkit-transition: all .35s ease;
+                                -o-transition: all .35s ease;
+                                transition: all .35s ease
+                            }
+
+                            .alm-layouts .alm-listing .alm-cta img {
+                                width: 100%;
+                                clear: both;
+                                position: static;
+                                margin: 0;
+                                -webkit-border-radius: 0;
+                                border-radius: 0;
+                                -webkit-transition: all .25s ease .1s;
+                                -o-transition: all .25s ease .1s;
+                                transition: all .25s ease .1s;
+                                -webkit-border-radius: 3px;
+                                border-radius: 3px
+                            }
+
+                            .alm-layouts .alm-listing .alm-cta a {
+                                display: block;
+                                color: inherit;
+                                text-decoration: none
+                            }
+
+                            .alm-layouts .alm-listing .alm-cta a:focus img,
+                            .alm-layouts .alm-listing .alm-cta a:hover img {
+                                opacity: .7
+                            }
+
+                            .alm-layouts .alm-listing .alm-cta a:focus h3,
+                            .alm-layouts .alm-listing .alm-cta a:hover h3 {
+                                text-decoration: underline
+                            }
+
+                            .alm-layouts .alm-listing .alm-cta .details {
+                                padding: 15px;
+                                display: block;
+                                border-top: none;
+                                position: relative
+                            }
+
+                            .alm-layouts .alm-listing .alm-cta h3 {
+                                color: #333;
+                                margin: 0 0 15px;
+                                text-decoration: none
+                            }
+
+                            .alm-layouts .alm-listing .alm-cta p {
+                                text-align: left
+                            }
+
+                            .alm-layouts .alm-listing .alm-card {
+                                position: relative
+                            }
+
+                            .alm-layouts .alm-listing .alm-card a.card-container {
+                                -webkit-perspective: 1000px;
+                                perspective: 1000px;
+                                border: 1px solid #efefef !important;
+                                background: #f7f7f7;
+                                display: block;
+                                position: relative
+                            }
+
+                            .alm-layouts .alm-listing .alm-card a.card-container.hover .card-flip,
+                            .alm-layouts .alm-listing .alm-card a.card-container:hover .card-flip {
+                                -webkit-transform: rotateY(180deg);
+                                transform: rotateY(180deg)
+                            }
+
+                            @media (-ms-high-contrast:active),
+                            (-ms-high-contrast:none) {
+
+                                .alm-layouts .alm-listing .alm-card a.card-container.hover .card-flip,
+                                .alm-layouts .alm-listing .alm-card a.card-container:hover .card-flip {
+                                    -webkit-transform: rotateY(0deg);
+                                    transform: rotateY(0deg)
+                                }
+                            }
+
+                            .alm-layouts .alm-listing .alm-card .card-flip {
+                                -webkit-transition: .6s;
+                                -o-transition: .6s;
+                                transition: .6s;
+                                -webkit-transform-style: preserve-3d;
+                                transform-style: preserve-3d;
+                                position: relative
+                            }
+
+                            .alm-layouts .alm-listing .alm-card .img-mask {
+                                opacity: 0;
+                                visibility: hidden
+                            }
+
+                            .alm-layouts .alm-listing .alm-card .card-back,
+                            .alm-layouts .alm-listing .alm-card .card-front {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                -webkit-backface-visibility: hidden;
+                                backface-visibility: hidden;
+                                -webkit-transition: .6s;
+                                -o-transition: .6s;
+                                transition: .6s;
+                                -webkit-transform-style: preserve-3d;
+                                transform-style: preserve-3d;
+                                -webkit-transform: rotateY(0deg);
+                                transform: rotateY(0deg)
+                            }
+
+                            .alm-layouts .alm-listing .alm-card .card-front {
+                                z-index: 2;
+                                -webkit-transform: rotateY(0deg);
+                                transform: rotateY(0deg)
+                            }
+
+                            .alm-layouts .alm-listing .alm-card .card-back {
+                                -webkit-transform: rotateY(-180deg);
+                                transform: rotateY(-180deg)
+                            }
+
+                            .alm-layouts .alm-listing .alm-card h3 {
+                                position: absolute;
+                                bottom: 0;
+                                margin: 0;
+                                color: #fff;
+                                font-size: 18px;
+                                line-height: 20px;
+                                padding: 14px 20px;
+                                background-color: rgba(0, 0, 0, .6);
+                                max-width: 90%
+                            }
+
+                            .alm-layouts .alm-listing .alm-card h3 span {
+                                display: block;
+                                opacity: .65;
+                                font-weight: 400;
+                                font-size: 14px;
+                                color: #fff;
+                                padding: 4px 0 0
+                            }
+
+                            .alm-layouts .alm-listing .alm-card img {
+                                height: auto
+                            }
+
+                            .alm-layouts .alm-listing .alm-card .text-wrap {
+                                width: 100%;
+                                height: 100%;
+                                display: block;
+                                padding: 0 7%;
+                                background-color: #222;
+                                -webkit-box-shadow: inset 0 0 0 10px #333, inset 0 0 0 11px hsla(0, 0%, 100%, .1);
+                                box-shadow: inset 0 0 0 10px #333, inset 0 0 0 11px hsla(0, 0%, 100%, .1);
+                                text-align: center
+                            }
+
+                            .alm-layouts .alm-listing .alm-card .text-wrap,
+                            .alm-layouts .alm-listing .alm-card p {
+                                position: absolute;
+                                top: 50%;
+                                -webkit-transform: translateY(-50%);
+                                -ms-transform: translateY(-50%);
+                                transform: translateY(-50%)
+                            }
+
+                            .alm-layouts .alm-listing .alm-card p {
+                                color: #ccc;
+                                padding: 0 20px;
+                                margin: 0 0 10px;
+                                font-size: 14px;
+                                text-align: left;
+                                max-height: 80%;
+                                overflow-y: auto;
+                                width: 86%
+                            }
+
+                            .alm-layouts .alm-listing .alm-card span.more {
+                                font-weight: 700;
+                                color: #fff;
+                                padding: 8px 0 0;
+                                margin: 0;
+                                display: block;
+                                font-size: 12px;
+                                text-transform: uppercase
+                            }
+
+                            .alm-layouts .alm-listing .alm-gallery {
+                                padding: 1px
+                            }
+
+                            .alm-layouts .alm-listing .alm-gallery a {
+                                display: block;
+                                overflow: hidden;
+                                position: relative
+                            }
+
+                            .alm-layouts .alm-listing .alm-gallery a:hover img {
+                                -webkit-transform: scale(1.2);
+                                -ms-transform: scale(1.2);
+                                transform: scale(1.2)
+                            }
+
+                            .alm-layouts .alm-listing .alm-gallery a:hover .alm-gallery-img-wrap {
+                                -webkit-filter: blur(5px);
+                                filter: blur(5px)
+                            }
+
+                            .alm-layouts .alm-listing .alm-gallery a:hover .overlay-details {
+                                opacity: 1
+                            }
+
+                            .alm-layouts .alm-listing .alm-gallery .overlay-details {
+                                opacity: 0;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                -webkit-transition: opacity .5s ease .15s;
+                                -o-transition: opacity .5s ease .15s;
+                                transition: opacity .5s ease .15s;
+                                background: rgba(0, 0, 0, .4);
+                                padding: 0 10%;
+                                text-align: center;
+                                text-shadow: 0 0 1px rgba(0, 0, 0, .1)
+                            }
+
+                            .alm-layouts .alm-listing .alm-gallery .overlay-details .vertical-align {
+                                position: relative;
+                                top: 50%;
+                                -webkit-transform: translateY(-50%);
+                                -ms-transform: translateY(-50%);
+                                transform: translateY(-50%)
+                            }
+
+                            .alm-layouts .alm-listing .alm-gallery img {
+                                position: static;
+                                width: 100%;
+                                height: auto;
+                                -webkit-transform: scale(1.05);
+                                -ms-transform: scale(1.05);
+                                transform: scale(1.05);
+                                -webkit-backface-visibility: hidden;
+                                backface-visibility: hidden
+                            }
+
+                            .alm-layouts .alm-listing .alm-gallery .alm-gallery-img-wrap,
+                            .alm-layouts .alm-listing .alm-gallery img {
+                                -webkit-transition: all .45s ease-in-out;
+                                -o-transition: all .45s ease-in-out;
+                                transition: all .45s ease-in-out
+                            }
+
+                            .alm-layouts .alm-listing .alm-gallery h3 {
+                                color: #fff;
+                                margin: 0 0 15px;
+                                font-weight: 800
+                            }
+
+                            .alm-layouts .alm-listing .alm-gallery p {
+                                color: #fff;
+                                margin: 0;
+                                opacity: .85
+                            }
+
+                            .alm-layouts .alm-listing .alm-gallery p.entry-date {
+                                margin: 0 0 5px;
+                                opacity: .5;
+                                font-weight: 300;
+                                font-size: 12px;
+                                text-transform: uppercase
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card {
+                                background: #efefef;
+                                border: 1px solid #e7e7e7;
+                                -webkit-border-radius: 5px;
+                                border-radius: 5px;
+                                padding: 25px 25px 110px;
+                                width: 100%;
+                                text-align: center;
+                                margin-top: 30px
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card img.wp-post-image {
+                                border: 3px solid #fff;
+                                -webkit-border-radius: 100%;
+                                border-radius: 100%;
+                                -webkit-box-shadow: 0 0 3px #ccc;
+                                box-shadow: 0 0 3px #ccc;
+                                width: 120px;
+                                height: 120px;
+                                margin: -60px auto 25px
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card h3,
+                            .alm-layouts .alm-listing .alm-blog-card p {
+                                margin: 0 0 15px;
+                                padding: 0 5%
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card p.alm-meta {
+                                opacity: .75;
+                                margin-bottom: 0;
+                                font-size: 13px
+                            }
+
+                            .alm-layouts .alm-listing .alm-post-author {
+                                display: block;
+                                width: 100%;
+                                height: 60px;
+                                overflow: visible;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                background: #fff;
+                                border-top: 1px solid #e7e7e7;
+                                padding: 0 10px;
+                                -webkit-border-radius: 0 0 4px 4px;
+                                border-radius: 0 0 4px 4px;
+                                font-size: 13px
+                            }
+
+                            .alm-layouts .alm-listing .alm-post-author span {
+                                display: block;
+                                padding: 15px;
+                                line-height: 30px;
+                                width: 100%;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                -o-text-overflow: ellipsis;
+                                text-overflow: ellipsis
+                            }
+
+                            .alm-layouts .alm-listing .alm-post-author img {
+                                max-width: 36px;
+                                max-height: 36px;
+                                -webkit-border-radius: 100%;
+                                border-radius: 100%;
+                                -webkit-box-shadow: 0 0 0 1px #e1e1e1;
+                                box-shadow: 0 0 0 1px #e1e1e1;
+                                position: absolute;
+                                left: 50%;
+                                top: -18px;
+                                margin-left: -18px;
+                                z-index: 2
+                            }
+
+                            .alm-layouts .alm-listing .alm-post-author a {
+                                text-decoration: none
+                            }
+
+                            .alm-layouts .alm-listing .alm-post-author a:focus,
+                            .alm-layouts .alm-listing .alm-post-author a:hover {
+                                text-decoration: underline
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-2 {
+                                background: #fff;
+                                border: 1px solid #e7e7e7;
+                                -webkit-border-radius: 2px;
+                                border-radius: 2px;
+                                padding: 0 0 60px;
+                                width: 100%;
+                                text-align: left
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-2 img.wp-post-image {
+                                width: 100%;
+                                margin: 0;
+                                display: block;
+                                -webkit-border-radius: 1px 1px 0 0;
+                                border-radius: 1px 1px 0 0
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-2 .alm-card-details {
+                                display: block;
+                                padding: 40px 30px 30px;
+                                position: relative
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-2 .avatar {
+                                width: 50px;
+                                height: 50px;
+                                -webkit-border-radius: 100%;
+                                border-radius: 100%;
+                                position: absolute;
+                                top: -25px;
+                                left: 30px;
+                                z-index: 1
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-2 h3 {
+                                margin: 0 0 20px
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-2 p {
+                                margin: 0 0 20px;
+                                font-size: 15px
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-2 p.alm-more-link {
+                                margin: 0;
+                                font-weight: 600;
+                                font-size: 13px;
+                                text-transform: uppercase
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-2 .alm-post-author {
+                                background-color: #f7f7f7;
+                                -webkit-box-shadow: inset 0 2px 1px rgba(0, 0, 0, .05);
+                                box-shadow: inset 0 2px 1px rgba(0, 0, 0, .05)
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-3 {
+                                background: #f7f7f7;
+                                border: none;
+                                -webkit-border-radius: 10px;
+                                border-radius: 10px;
+                                padding: 0;
+                                width: 100%;
+                                text-align: left;
+                                overflow: hidden;
+                                -webkit-box-shadow: 0 0 0 1px #efefef;
+                                box-shadow: 0 0 0 1px #efefef
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-3 img.wp-post-image {
+                                width: 100%;
+                                margin: 0;
+                                display: block;
+                                -webkit-border-radius: 10px 10px 0 0;
+                                border-radius: 10px 10px 0 0
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-3 .alm-card-details {
+                                display: block;
+                                padding: 30px 30px 70px;
+                                position: relative
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-3 h3 {
+                                font-weight: 600;
+                                font-size: 20px;
+                                margin: 0 0 20px
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-3 p {
+                                margin: 0 0 20px;
+                                font-size: 15px
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-3 .alm-post-author {
+                                border-top: none;
+                                -webkit-border-radius: 0 0 14px 14px;
+                                border-radius: 0 0 14px 14px;
+                                display: -webkit-box;
+                                display: -ms-flexbox;
+                                display: flex;
+                                -ms-flex-wrap: nowrap;
+                                flex-wrap: nowrap;
+                                -webkit-box-align: center;
+                                -ms-flex-align: center;
+                                align-items: center;
+                                padding: 20px 30px;
+                                border-top: 1px solid #efefef
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-3 .alm-post-author img,
+                            .alm-layouts .alm-listing .alm-blog-card-3 .alm-post-author span {
+                                display: inline-block;
+                                vertical-align: top
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-3 .alm-post-author img {
+                                position: static;
+                                margin: 0 10px 0 0;
+                                -webkit-box-shadow: none;
+                                box-shadow: none
+                            }
+
+                            .alm-layouts .alm-listing .alm-blog-card-3 .alm-post-author span {
+                                width: auto;
+                                padding: 0;
+                                -webkit-box-flex: 1;
+                                -ms-flex: 1;
+                                flex: 1
+                            }
+
+                            @media screen and (max-width:1024px) {
+
+                                .alm-layouts .alm-listing .alm-default>a,
+                                .alm-layouts .alm-listing .alm-default>img.wp-post-image {
+                                    width: 120px
+                                }
+
+                                .alm-layouts .alm-listing .alm-overlay .overlay-details {
+                                    padding: 15px
+                                }
+
+                                .alm-layouts .alm-listing .alm-overlay .overlay-details h3 {
+                                    font-size: 18px
+                                }
+
+                                .alm-layouts .alm-listing .alm-overlay .overlay-details p {
+                                    font-size: 14px
+                                }
+
+                                .alm-layouts .alm-listing .alm-layout.alm-3-col.alm-gallery,
+                                .alm-layouts .alm-listing .alm-layout.alm-4-col.alm-gallery {
+                                    width: 50%
+                                }
+
+                                .alm-layouts .alm-listing .alm-layout.alm-4-col {
+                                    width: 48%;
+                                    margin-right: 4%
+                                }
+
+                                .alm-layouts .alm-listing .alm-layout.alm-4-col:nth-child(2n) {
+                                    margin-right: 0
+                                }
+                            }
+
+                            @media screen and (max-width:768px) {
+                                .alm-layouts .alm-listing .alm-overlay .overlay-details {
+                                    padding: 12px
+                                }
+
+                                .alm-layouts .alm-listing .alm-layout .alm-overlay h3 {
+                                    margin: 0;
+                                    font-size: 18px;
+                                    line-height: 1
+                                }
+
+                                .alm-layouts .alm-listing .alm-layout .alm-overlay p {
+                                    display: none
+                                }
+
+                                .alm-layouts .alm-listing .alm-layout.alm-gallery {
+                                    float: none;
+                                    width: 100%
+                                }
+
+                                .alm-layouts .alm-listing .alm-gallery .overlay-details {
+                                    padding: 0 15%
+                                }
+
+                                alm-layouts .alm-gallery h3 {
+                                    color: #fff;
+                                    font-size: 26px
+                                }
+
+                                .alm-layouts .alm-listing .alm-gallery p {
+                                    font-size: 16px
+                                }
+
+                                .alm-layouts .alm-listing .alm-card img {
+                                    width: auto;
+                                    height: auto
+                                }
+
+                                .alm-layouts .alm-listing .alm-blog-card img.wp-post-image {
+                                    border: 2px solid #fff;
+                                    width: 100px;
+                                    height: 100px;
+                                    margin: -50px auto 20px
+                                }
+                            }
+
+                            @media screen and (max-width:480px) {
+
+                                .alm-layouts .alm-listing .alm-default>a,
+                                .alm-layouts .alm-listing .alm-default>img.wp-post-image {
+                                    width: 80px
+                                }
+
+                                .alm-layouts .alm-listing .alm-gallery .overlay-details {
+                                    padding: 0 10%
+                                }
+
+                                .alm-layouts .alm-listing .alm-gallery h3 {
+                                    color: #fff;
+                                    font-size: 22px
+                                }
+
+                                .alm-layouts .alm-listing .alm-gallery p {
+                                    font-size: 14px
+                                }
+
+                                .alm-layouts .alm-listing .alm-gallery p:not(.entry-date) {
+                                    display: none
+                                }
+                            }
+                        </style>
+                        <div aria-live="polite" aria-atomic="true" class="alm-listing alm-ajax alm-paging-wrap"
+                            style="transition: height 0.2s linear;" data-paging="true" data-paging-controls="true"
+                            data-paging-show-at-most="3" data-paging-classes="pagination justify-content-center"
+                            data-paging-first-label="" data-paging-last-label="" data-paging-previous-label="&laquo;"
+                            data-paging-next-label="&raquo;" data-preloaded="true" data-preloaded-amount="3"
+                            data-container-type="div" data-loading-style="infinite classic" data-repeater="template_1"
+                            data-post-type="case-study, impact-story" data-taxonomy="region:topic"
+                            data-taxonomy-terms=":" data-taxonomy-operator="IN:IN" data-order="DESC" data-orderby="date"
+                            data-offset="0" data-posts-per-page="3" data-pause="true" data-button-label="Load More"
+                            data-prev-button-label="Load Previous">
+                            <div class="alm-paging-content" style="opacity: 0; outline: none;">
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="grid-single"> <a
+                                            href="https://libraryforall.org/case-study/trauma-informed-earthquake-books/">
+                                            <div class="thumb layer-absolute placeholder-media"> <img decoding="async"
+                                                    class="lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    data-src="https://libraryforall.org/wp-content/uploads/2023/09/content-icon.svg"
+                                                    alt=""><noscript><img decoding="async" class="lazyload"
+                                                        src="https://libraryforall.org/wp-content/uploads/2023/09/content-icon.svg"
+                                                        alt=""></noscript></div>
+                                            <div class="content">
+                                                <h5>Trauma-Informed Earthquake Books Ready for Distribution to Children
+                                                    in Efate </h5>
+                                                <p><i>01 October 2025</i></p>
+                                                <div class="btn-arrow btn-float flex-inline-center"> <img
+                                                        decoding="async" class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                        data-src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/arrow-redirect.svg"
+                                                        alt=""><noscript><img decoding="async" class="lazyload"
+                                                            src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/arrow-redirect.svg"
+                                                            alt=""></noscript></div>
+                                            </div>
+                                            <div class="locator"> <img decoding="async" class="lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    data-src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/locator-icon.svg"
+                                                    alt=""><noscript><img decoding="async" class="lazyload"
+                                                        src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/locator-icon.svg"
+                                                        alt=""></noscript> <span>Australia</span></div>
+                                        </a></div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="grid-single"> <a
+                                            href="https://libraryforall.org/case-study/bhutan-delivery-of-childrens-books/">
+                                            <div class="thumb layer-absolute placeholder-media"> <img decoding="async"
+                                                    class="lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    data-src="https://libraryforall.org/wp-content/uploads/2025/09/A91l3viic_19qtvfs_7tg.jpg"
+                                                    alt=""><noscript><img decoding="async" class="lazyload"
+                                                        src="https://libraryforall.org/wp-content/uploads/2025/09/A91l3viic_19qtvfs_7tg.jpg"
+                                                        alt=""></noscript></div>
+                                            <div class="content">
+                                                <h5>Bhutan Delivery of LFA Children’s Books: A Brief Report</h5>
+                                                <p><i>23 September 2025</i></p>
+                                                <div class="btn-arrow btn-float flex-inline-center"> <img
+                                                        decoding="async" class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                        data-src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/arrow-redirect.svg"
+                                                        alt=""><noscript><img decoding="async" class="lazyload"
+                                                            src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/arrow-redirect.svg"
+                                                            alt=""></noscript></div>
+                                            </div>
+                                            <div class="locator"> <img decoding="async" class="lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    data-src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/locator-icon.svg"
+                                                    alt=""><noscript><img decoding="async" class="lazyload"
+                                                        src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/locator-icon.svg"
+                                                        alt=""></noscript> <span>Asia</span></div>
+                                        </a></div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="grid-single"> <a
+                                            href="https://libraryforall.org/case-study/what-does-generative-ai-mean-for-culturally-diverse-publishing/">
+                                            <div class="thumb layer-absolute placeholder-media"> <img decoding="async"
+                                                    class="lazyload"
+                                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                    data-src="https://libraryforall.org/wp-content/uploads/2025/07/Web-banner-AI-blog-02-scaled.png"
+                                                    alt=""><noscript><img decoding="async" class="lazyload"
+                                                        src="https://libraryforall.org/wp-content/uploads/2025/07/Web-banner-AI-blog-02-scaled.png"
+                                                        alt=""></noscript></div>
+                                            <div class="content">
+                                                <h5>What does Generative AI mean for culturally-diverse publishing?
+                                                </h5>
+                                                <p><i>30 July 2025</i></p>
+                                                <div class="btn-arrow btn-float flex-inline-center"> <img
+                                                        decoding="async" class="lazyload"
+                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                                        data-src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/arrow-redirect.svg"
+                                                        alt=""><noscript><img decoding="async" class="lazyload"
+                                                            src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/arrow-redirect.svg"
+                                                            alt=""></noscript></div>
+                                            </div>
+                                        </a></div>
+                                </div>
+                            </div>
+                            <div class="alm-paging-loading"></div>
+                        </div>
+                        <div class="alm-btn-wrap" data-rel="ajax-load-more"></div>
+                        <div class="alm-no-results" style="display: none;">
+                            <div class="no_result">
+                                <h3 class="text-center">No Result Found.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+        class="two-column-image-content-boxes-wrapper dynamic-theme-sky  middle-image-content-boxes-block block-reverse "
+        id="block_7320738691ca75e4aa918e90c042a749">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="image-shape-box text-center">
+                        <div class="image"> <img decoding="async" class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="https://libraryforall.org/wp-content/uploads/2025/06/20241119_011051087_-WEB.jpg"
+                                alt=""><noscript><img decoding="async" class="lazyload"
+                                    src="https://libraryforall.org/wp-content/uploads/2025/06/20241119_011051087_-WEB.jpg"
+                                    alt=""></noscript></div>
+                    </div>
+                    <div class="middle-image-content-boxes">
+                        <div class="image"> <img decoding="async" class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="https://libraryforall.org/wp-content/uploads/2025/06/20241119_011051087_-WEB.jpg"
+                                alt=""><noscript><img decoding="async" class="lazyload"
+                                    src="https://libraryforall.org/wp-content/uploads/2025/06/20241119_011051087_-WEB.jpg"
+                                    alt=""></noscript></div>
+                        <div class="shape d-lg-none text-end"> <img decoding="async" class="lazyload"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                data-src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/breakpoint-arrow-bottom.svg"
+                                alt=""><noscript><img decoding="async" class="lazyload"
+                                    src="https://libraryforall.org/wp-content/themes/libraryforalltheme/images/breakpoint-arrow-bottom.svg"
+                                    alt=""></noscript></div>
+                        <div class="content-boxes">
+                            <div class="box-single">
+                                <div class="arrow"> <img decoding="async" class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        data-src="https://libraryforall.org/wp-content/uploads/2023/09/arrow-zig-zag-left-down-white.svg"
+                                        alt=""><noscript><img decoding="async" class="lazyload"
+                                            src="https://libraryforall.org/wp-content/uploads/2023/09/arrow-zig-zag-left-down-white.svg"
+                                            alt=""></noscript></div>
+                                <div class="box">
+                                    <p>Empowering local storytellers to strengthen regional publishing and cultural
+                                        identity.</p>
+                                </div>
+                            </div>
+                            <div class="box-single">
+                                <div class="arrow"> <img decoding="async" class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        data-src="https://libraryforall.org/wp-content/uploads/2023/09/arrow-curl-left-white.svg"
+                                        alt=""><noscript><img decoding="async" class="lazyload"
+                                            src="https://libraryforall.org/wp-content/uploads/2023/09/arrow-curl-left-white.svg"
+                                            alt=""></noscript></div>
+                                <div class="box">
+                                    <p>Creating authentic, inclusive books that improve literacy and engagement.</p>
+                                </div>
+                            </div>
+                            <div class="box-single">
+                                <div class="arrow"> <img decoding="async" class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        data-src="https://libraryforall.org/wp-content/uploads/2023/09/arrow-zig-zag-left-white.svg"
+                                        alt=""><noscript><img decoding="async" class="lazyload"
+                                            src="https://libraryforall.org/wp-content/uploads/2023/09/arrow-zig-zag-left-white.svg"
+                                            alt=""></noscript></div>
+                                <div class="box">
+                                    <p>Delivering a scalable, partner-driven model with proven global impact.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-box">
+                        <h6 class="text-uppercase">WRITERS WORKSHOPS</h6>
+                        <h3>Stories shaped by local voices, for local readers</h3>
+                        <p data-start="116" data-end="527">We co-facilitate Writers Workshops with local authors and
+                            illustrators to create books rooted in everyday life, traditions, and local languages and
+                            perspectives. These workshops support local publishing ecosystems, prioritise cultural
+                            expression, and ensure every child can see themselves in the stories they read.</p>
+                        <div class="block-btn"> <a href="https://libraryforall.org/solutions/writers-workshops/"
+                                target="_blank" class="btn-default btn-black">LEARN MORE</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="global-image-text-step-grids-block  " id="block_746f4ec8d5d26252fbbc69301461e5a9">
+        <div class="container">
+            <div class="digital-plaform-solid-box block-reverse">
+                <div class="box-inner">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="image-with-illustrations">
+                                <div class="image"> <img decoding="async" class="lazyload"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        data-src="https://libraryforall.org/wp-content/uploads/2023/09/lfa-app.png"
+                                        alt=""><noscript><img decoding="async" class="lazyload"
+                                            src="https://libraryforall.org/wp-content/uploads/2023/09/lfa-app.png"
+                                            alt=""></noscript></div>
+                                <div class="illustration">
+                                    <div class="illustrate-left"> <img decoding="async" class="lazyload"
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                            data-src="https://libraryforall.org/wp-content/uploads/2023/09/digital-ill-left.svg"
+                                            alt=""><noscript><img decoding="async" class="lazyload"
+                                                src="https://libraryforall.org/wp-content/uploads/2023/09/digital-ill-left.svg"
+                                                alt=""></noscript></div>
+                                    <div class="illustrate-right"> <img decoding="async" class="lazyload"
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                            data-src="https://libraryforall.org/wp-content/uploads/2023/09/digital-ill-right.svg"
+                                            alt=""><noscript><img decoding="async" class="lazyload"
+                                                src="https://libraryforall.org/wp-content/uploads/2023/09/digital-ill-right.svg"
+                                                alt=""></noscript></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h3>Download the FREE Library For All apps today</h3>
+                                <p>Join a global community of young readers with access to hundreds of books.</p>
+                                <div class="btn-list"> <a href="https://libraryforall.org/solutions/mobile-apps/"
+                                        target="_blank" class="btn-default btn-black">MOBILE LIBRARY APPS</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div
+        class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-9d6595d7 wp-block-columns-is-layout-flex">
+        <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:100%"></div>
     </div>
-
-    <footer>&copy; 2024 Library For All</footer>
-
-    <script>
-        loginForm.onsubmit = e => { e.preventDefault(); let b = e.target.querySelector("button"); b.textContent = "Signing in..."; b.disabled = 1; setTimeout(() => { b.textContent = "Sign In"; b.disabled = 0 }, 1e3) }
-    </script>
-
+    <section class="bg-stripe-box-block " id="block_1f51cf7abf4257d0c765213fc208fc3b">
+        <div class="container">
+            <div class="box">
+                <div class="image"> <img decoding="async" class="lazyload"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        data-src="https://libraryforall.org/wp-content/uploads/2023/09/save-the-children.svg"
+                        alt=""><noscript><img decoding="async" class="lazyload"
+                            src="https://libraryforall.org/wp-content/uploads/2023/09/save-the-children.svg"
+                            alt=""></noscript></div>
+                <div class="text">
+                    <h5>We are a not for profit entity of Save the Children Australia</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="flag-representation-box acknowledge-block " id="block_6e6b60907f727f1c441b5dba2bd55441">
+        <div class="container">
+            <div class="flag-data-box">
+                <div class="flag-list">
+                    <div class="flag-single"> <img decoding="async" class="lazyload"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                            data-src="https://libraryforall.org/wp-content/uploads/2023/10/L4A-Logos.png"
+                            alt=""><noscript><img decoding="async" class="lazyload"
+                                src="https://libraryforall.org/wp-content/uploads/2023/10/L4A-Logos.png"
+                                alt=""></noscript></div>
+                </div>
+                <div class="flag-text">
+                    <p style="text-align: left;"><span style="font-weight: 300;">Library For All is registered as a
+                            charity in Australia with the Australian Charities and Not-for-profits Co</span><span
+                            style="font-weight: 300;">mmission (ACNC).</span></p>
+                    <p style="text-align: left;"><span style="font-weight: 300;">Our registered Australian Business
+                            Number (ABN) is 57 602 320 865. </span></p>
+                    <p style="text-align: left;"><span style="font-weight: 300;">W</span><span
+                            style="font-weight: 300;">e are a Public Benevolent Institution (PBI) and we are endorsed as
+                            a Deductible Gift Recipient (</span><span style="font-weight: 300;">DGR) Item 1.</span></p>
+                    <p style="text-align: left;"><span style="font-weight: 300;">All donations $2 and over are
+                            tax-deductible in Australia. </span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p></p>
+    <footer class="site-main-footer">
+        <div class="shape-collection-outer">
+            <div class="container">
+                <div class="shape-collection"> <img
+                        src="https://libraryforall.org/wp-content/uploads/2023/09/footer-shape-collection.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <section class="flag-representation-box">
+            <div class="container">
+                <div class="flag-data-box">
+                    <div class="flag-list">
+                        <div class="flag-single"> <img
+                                src="https://libraryforall.org/wp-content/uploads/2023/09/aboriginal-flag.png" alt="">
+                        </div>
+                        <div class="flag-single"> <img
+                                src="https://libraryforall.org/wp-content/uploads/2023/09/torres-flag.png" alt=""></div>
+                    </div>
+                    <div class="flag-text">
+                        <p><em>Library For All operates across the world with our base operations in Australia. We
+                                acknowledge the Traditional Custodians of Country throughout Australia and the
+                                continuation of cultural, spiritual, and educational practices of Aboriginal and Torres
+                                Strait Islander peoples. We pay our respect to Elders past and present and extend that
+                                respect to all Aboriginal and Torres Strait Islander peoples today.</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer-theme-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <div class="logo-box">
+                            <div class="logo"> <a href="https://libraryforall.org"> <img
+                                        src="https://libraryforall.org/wp-content/uploads/2025/04/Library-for-All-Logos-UPDATED-2021-24.png"
+                                        alt=""> </a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-6">
+                        <div class="footer-nav-row">
+                            <div class="nav-upper d-lg-block d-none">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="nav-box">
+                                            <div class="nav-list">
+                                                <h6 class="d-sm-block d-none">Why Education</h6>
+                                                <div class="menu-why-education-container">
+                                                    <ul id="menu-why-education" class="menu">
+                                                        <li id="menu-item-2680"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2680 nav-item">
+                                                            <a href="https://libraryforall.org/why-education/education-in-emergencies/"
+                                                                class="nav-link">Education in Emergencies</a></li>
+                                                        <li id="menu-item-2679"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2679 nav-item">
+                                                            <a href="https://libraryforall.org/why-education/climate-and-disasters/"
+                                                                class="nav-link">Climate &#038; Disasters</a></li>
+                                                        <li id="menu-item-2678"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2678 nav-item">
+                                                            <a href="https://libraryforall.org/why-education/gender-inclusion/"
+                                                                class="nav-link">Gender &#038; Inclusion</a></li>
+                                                        <li id="menu-item-2677"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2677 nav-item">
+                                                            <a href="https://libraryforall.org/why-education/mental-psychosocial-health/"
+                                                                class="nav-link">Mental Health &#038; Psychosocial
+                                                                Support</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="nav-box">
+                                            <div class="nav-list">
+                                                <h6 class="d-sm-block d-none">Impact</h6>
+                                                <div class="menu-impact-container">
+                                                    <ul id="menu-impact" class="menu">
+                                                        <li id="menu-item-192"
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192 nav-item">
+                                                            <a href="https://libraryforall.org/impact/australia-our-yarning/"
+                                                                class="nav-link">Australia &#8211; Our Yarning</a></li>
+                                                        <li id="menu-item-2681"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2681 nav-item">
+                                                            <a href="https://libraryforall.org/impact/pacific/"
+                                                                class="nav-link">Pacific</a></li>
+                                                        <li id="menu-item-194"
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-194 nav-item">
+                                                            <a href="https://libraryforall.org/impact/africa/"
+                                                                class="nav-link">Africa</a></li>
+                                                        <li id="menu-item-195"
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-195 nav-item">
+                                                            <a href="https://libraryforall.org/impact/asia/"
+                                                                class="nav-link">Asia</a></li>
+                                                        <li id="menu-item-2676"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2676 nav-item">
+                                                            <a href="https://libraryforall.org/impact/ukraine-response/"
+                                                                class="nav-link">Ukraine Response</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="nav-box">
+                                            <div class="nav-list">
+                                                <h6 class="d-sm-block d-none">Solutions</h6>
+                                                <div class="menu-solutions-container">
+                                                    <ul id="menu-solutions" class="menu">
+                                                        <li id="menu-item-2682"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2682 nav-item">
+                                                            <a href="https://libraryforall.org/solutions/writers-workshops/"
+                                                                class="nav-link">Writers Workshops</a></li>
+                                                        <li id="menu-item-2683"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2683 nav-item">
+                                                            <a href="https://libraryforall.org/solutions/spark/"
+                                                                class="nav-link">Spark Box</a></li>
+                                                        <li id="menu-item-2684"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2684 nav-item">
+                                                            <a href="https://libraryforall.org/solutions/books/"
+                                                                class="nav-link">Books</a></li>
+                                                        <li id="menu-item-2685"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2685 nav-item">
+                                                            <a href="https://libraryforall.org/solutions/elevate-app/"
+                                                                class="nav-link">Elevate App</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4">
+                                        <div class="nav-box">
+                                            <div class="nav-list">
+                                                <h6 class="d-sm-block d-none">About</h6>
+                                                <div class="menu-about-container">
+                                                    <ul id="menu-about" class="menu">
+                                                        <li id="menu-item-197"
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-197 nav-item">
+                                                            <a href="https://libraryforall.org/about-us/news-research/"
+                                                                class="nav-link">News &#038; Research</a></li>
+                                                        <li id="menu-item-198"
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198 nav-item">
+                                                            <a href="https://libraryforall.org/about-us/reports/"
+                                                                class="nav-link">Reports</a></li>
+                                                        <li id="menu-item-199"
+                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199 nav-item">
+                                                            <a href="https://libraryforall.org/about-us/partners/"
+                                                                class="nav-link">Partner With Us</a></li>
+                                                        <li id="menu-item-1981"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1981 nav-item">
+                                                            <a rel="privacy-policy"
+                                                                href="https://libraryforall.org/privacy-policy/"
+                                                                class="nav-link">Privacy Policy</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="footer-social">
+                                                <div class="social-icon"> <a
+                                                        href="https://www.youtube.com/@libraryforall2184" target="">
+                                                        <img src="https://libraryforall.org/wp-content/uploads/2023/09/youtube-icon1.svg"
+                                                            alt=""> </a></div>
+                                                <div class="social-icon"> <a
+                                                        href="https://www.facebook.com/libraryforall" target=""> <img
+                                                            src="https://libraryforall.org/wp-content/uploads/2023/11/facebook-icon.svg"
+                                                            alt=""> </a></div>
+                                                <div class="social-icon"> <a
+                                                        href="https://www.linkedin.com/company/2928243" target=""> <img
+                                                            src="https://libraryforall.org/wp-content/uploads/2023/09/linkedin-icon.svg"
+                                                            alt=""> </a></div>
+                                                <div class="social-icon"> <a
+                                                        href="https://www.instagram.com/libraryforall/" target=""> <img
+                                                            src="https://libraryforall.org/wp-content/uploads/2023/09/insta-icon.svg"
+                                                            alt=""> </a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-btn-list"> <a href="https://libraryforall.org/donate/"
+                                class="btn-default btn-white" target="_blank"> DONATE </a> <a
+                                href="https://libraryforall.org/contact/" class="btn-default btn-white" target="_blank">
+                                CONTACT </a></div>
+                    </div>
+                </div>
+                <div class="copyright-text">
+                    <p>(c) Copyright Library For All 2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script
+        type="speculationrules"> {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/libraryforalltheme/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]} </script>
+    <script defer type="text/javascript"
+        src="https://libraryforall.org/wp-content/plugins/sg-cachepress/assets/js/lazysizes.min.js?ver=7.7.4"
+        id="siteground-optimizer-lazy-sizes-js-js"></script>
+    <script type="text/javascript" id="custom-js-extra"> /* <![CDATA[ */
+        var ajax_object = { "ajax_url": "https://libraryforall.org/wp-admin/admin-ajax.php", "ajax_nonce": "308ca4889b" };
+        //# sourceURL=custom-js-extra
+        /* ]]> */ </script>
+    <script type="text/javascript" id="ajax-load-more-js-extra"> /* <![CDATA[ */
+        var alm_localize = { "pluginurl": "https://libraryforall.org/wp-content/plugins/ajax-load-more", "version": "7.7.1", "adminurl": "https://libraryforall.org/wp-admin/", "ajaxurl": "https://libraryforall.org/wp-admin/admin-ajax.php", "alm_nonce": "071fda4e84", "rest_api_url": "", "rest_api": "https://libraryforall.org/wp-json/", "rest_nonce": "a14efaf4bb", "trailing_slash": "true", "is_front_page": "true", "retain_querystring": "1", "speed": "250", "results_text": "Viewing {post_count} of {total_posts} results.", "no_results_text": "No results found.", "alm_debug": "", "a11y_focus": "1", "site_title": "Library For All", "site_tagline": "We make culturally relevant books and learning materials for communities worldwide", "button_label": "Load More" };
+        //# sourceURL=ajax-load-more-js-extra
+        /* ]]> */ </script>
+    <script defer
+        src="https://libraryforall.org/wp-content/uploads/siteground-optimizer-assets/siteground-optimizer-combined-js-237691471b931ef6a3855bb7e5b4a8ac.js"></script>
+    <script
+        type='text/javascript'>var SFM_template = "<div class=\"\n        sfm-rollback\n        sfm-color1\n        sfm-theme-none        sfm-label-hidden        sfm-label-none                        \"\n        style=\"\">\n<div class='sfm-navicon-button x sf_label_default '><div class=\"sfm-navicon\"><\/div> <\/div>\n<\/div>\n<div id=\"sfm-sidebar\" style=\"opacity:0\" class=\"sfm-theme-none sfm-hl-semi-dark sfm-indicators\">\n<div class=\"sfm-scroll-wrapper\">\n<div class=\"sfm-scroll\">\n<div class=\"sfm-sidebar-close\"><\/div>\n<div class=\"sfm-logo\">\n <a href=\"https:\/\/libraryforall.org\">\n <img src=\"https:\/\/libraryforall.org\/wp-content\/uploads\/2023\/09\/Library_for_All-Logo-Badge-AngledBlack.png\" alt=\"\">\n <\/a>\n<div class=\"sfm-title\"><\/div>\n <\/div>\n<nav class=\"sfm-nav\">\n<div class=\"sfm-va-middle\">\n<ul id=\"sfm-nav\" class=\"menu\"><li id=\"menu-item-204\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-204 nav-item\"><a href=\"https:\/\/libraryforall.org\/why-education\/\" class=\"nav-link\">Collections<\/a>\n<ul class=\"sub-menu\">\n\t<li id=\"menu-item-526\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-526 nav-item\"><a href=\"https:\/\/libraryforall.org\/why-education\/education-in-emergencies\/\" class=\"nav-link\">Education in Emergencies<\/a><\/li>\n\t<li id=\"menu-item-1979\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-1979 nav-item\"><a href=\"https:\/\/libraryforall.org\/why-education\/climate-and-disasters\/\" class=\"nav-link\">Climate &#038; Disasters<\/a><\/li>\n\t<li id=\"menu-item-2495\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-2495 nav-item\"><a href=\"https:\/\/libraryforall.org\/why-education\/gender-inclusion\/\" class=\"nav-link\">Gender &#038; Inclusion<\/a><\/li>\n\t<li id=\"menu-item-2496\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-2496 nav-item\"><a href=\"https:\/\/libraryforall.org\/why-education\/mental-psychosocial-health\/\" class=\"nav-link\">Mental Health &#038; Psychosocial Support<\/a><\/li>\n<\/ul>\n<\/li>\n<li id=\"menu-item-535\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-535 nav-item\"><a href=\"https:\/\/libraryforall.org\/solutions\/\" class=\"nav-link\">Solutions<\/a>\n<ul class=\"sub-menu\">\n\t<li id=\"menu-item-705\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-705 nav-item\"><a href=\"https:\/\/libraryforall.org\/solutions\/books\/\" class=\"nav-link\">Books<\/a><\/li>\n\t<li id=\"menu-item-6804\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-6804 nav-item\"><a href=\"https:\/\/libraryforall.org\/solutions\/mobile-apps\/\" class=\"nav-link\">Mobile Reader Apps<\/a><\/li>\n\t<li id=\"menu-item-534\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-534 nav-item\"><a href=\"https:\/\/libraryforall.org\/solutions\/writers-workshops\/\" class=\"nav-link\">Writers Workshops<\/a><\/li>\n\t<li id=\"menu-item-702\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-702 nav-item\"><a href=\"https:\/\/libraryforall.org\/solutions\/spark\/\" class=\"nav-link\">Spark Box<\/a><\/li>\n\t<li id=\"menu-item-788\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-788 nav-item\"><a href=\"https:\/\/libraryforall.org\/solutions\/elevate-app\/\" class=\"nav-link\">Elevate App<\/a><\/li>\n<\/ul>\n<\/li>\n<li id=\"menu-item-939\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-939 nav-item\"><a href=\"https:\/\/libraryforall.org\/impact\/\" class=\"nav-link\">Programs<\/a>\n<ul class=\"sub-menu\">\n\t<li id=\"menu-item-4500\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-4500 nav-item\"><a href=\"https:\/\/libraryforall.org\/impact\/australia-our-yarning\/\" class=\"nav-link\">Australia \u2013 Our Yarning<\/a><\/li>\n\t<li id=\"menu-item-940\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-940 nav-item\"><a href=\"https:\/\/libraryforall.org\/impact\/pacific\/\" class=\"nav-link\">Pacific<\/a><\/li>\n\t<li id=\"menu-item-4501\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-4501 nav-item\"><a href=\"https:\/\/libraryforall.org\/impact\/asia\/\" class=\"nav-link\">Asia<\/a><\/li>\n\t<li id=\"menu-item-4112\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-4112 nav-item\"><a href=\"https:\/\/libraryforall.org\/impact\/africa\/\" class=\"nav-link\">Africa<\/a><\/li>\n\t<li id=\"menu-item-2675\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-2675 nav-item\"><a href=\"https:\/\/libraryforall.org\/impact\/ukraine-response\/\" class=\"nav-link\">Ukraine Response<\/a><\/li>\n<\/ul>\n<\/li>\n<li id=\"menu-item-948\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-948 nav-item\"><a href=\"https:\/\/libraryforall.org\/about-us\/\" class=\"nav-link\">About Us<\/a>\n<ul class=\"sub-menu\">\n\t<li id=\"menu-item-1982\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-1982 nav-item\"><a href=\"https:\/\/libraryforall.org\/contact\/\" class=\"nav-link\">Contact<\/a><\/li>\n\t<li id=\"menu-item-4643\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-4643 nav-item\"><a href=\"https:\/\/libraryforall.org\/about-us\/news-research\/\" class=\"nav-link\">Stories &#038; News<\/a><\/li>\n\t<li id=\"menu-item-981\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-981 nav-item\"><a href=\"https:\/\/libraryforall.org\/about-us\/partners\/\" class=\"nav-link\">Partner With Us<\/a><\/li>\n\t<li id=\"menu-item-979\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-979 nav-item\"><a href=\"https:\/\/libraryforall.org\/about-us\/reports\/\" class=\"nav-link\">Reports<\/a><\/li>\n<\/ul>\n<\/li>\n<li id=\"menu-item-6703\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-6703 nav-item\"><a href=\"https:\/\/libraryforallshop.org\/\" class=\"nav-link\">Book Store<\/a><\/li>\n<li id=\"menu-item-1174\" class=\"nav-btn menu-item menu-item-type-post_type menu-item-object-page menu-item-1174 nav-item\"><a href=\"https:\/\/libraryforall.org\/donate\/\" class=\"nav-link\">Donate<\/a><\/li>\n<\/ul><div class=\"widget-area\"><\/div>\n <\/div>\n <\/nav>\n<ul class=\"sfm-social\"><\/ul>\n<div class=\"sfm-widget sfm-widget-bottom sfm-copy\">\n<p><div class=\"responsive-header-wrap\"><div class=\"responsive-header-btn-list\"><a href=\"https:\/\/libraryforall.org\/donate\/\" class=\"btn-default\" target=\"_blank\">DONATE<\/a><a href=\"https:\/\/libraryforall.org\/contact\/\" class=\"btn-default\" target=\"_blank\">CONTACT<\/a><\/div><div class=\"breakpoint-search-form\">\n<form action=\"https:\/\/libraryforall.org\" method=\"get\">\n<div class=\"form-group\">\n <input type=\"text\" name=\"s\" placeholder=\"Type your search\" value=\"\">\n <\/div>\n <\/form>\n <\/div><\/div><\/p> <\/div>\n <\/div>\n <\/div>\n<div class=\"sfm-sidebar-bg\"><\/div>\n<div class=\"sfm-view sfm-view-level-custom\">\n <span class=\"sfm-close\"><\/span>\n <\/div>\n<\/div>\n<div id=\"sfm-overlay-wrapper\"><div id=\"sfm-overlay\"><\/div><\/div>"</script>
 </body>
 
 </html>
