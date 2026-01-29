@@ -1,65 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
     <title>Login | Library For All</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
         body {
-            font-family: Montserrat, sans-serif;
-            background: #f8fafc
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #f8fafc;
+            padding: 16px
         }
 
-        .bg-lfa-teal {
-            background: #00B2A9
+        .card {
+            width: 100%;
+            max-width: 420px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .1);
+            overflow: hidden
         }
 
-        .text-lfa-teal {
-            color: #00B2A9
-        }
-
-        .bg-lfa-orange {
+        .topbar {
+            height: 8px;
             background: #F26522
         }
 
-        .hover-lfa-teal:hover {
+        .center {
+            text-align: center
+        }
+
+        .logo {
+            margin-bottom: 16px
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #1f2937
+        }
+
+        .subtitle {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #6b7280;
+            font-weight: 600;
+            text-transform: uppercase
+        }
+
+        h2 {
+            text-align: center;
+            margin: 0 0 24px;
+            font-size: 20px;
+            color: #1f2937
+        }
+
+        .form {
+            padding: 32px
+        }
+
+        .input {
+            width: 100%;
+            padding: 14px;
+            border-radius: 14px;
+            border: 1px solid #d1d5db;
+            font-size: 14px;
+            margin-bottom: 16px;
+            outline: none
+        }
+
+        .input:focus {
+            border-color: #00B2A9
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #4b5563;
+            margin-bottom: 20px
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 14px;
+            background: #00B2A9;
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer
+        }
+
+        .btn:hover {
             background: #00968F
         }
 
-        .border-lfa-teal {
-            border-color: #00B2A9
+        footer {
+            margin-top: 48px;
+            font-size: 12px;
+            color: #9ca3af
         }
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col items-center justify-center p-4">
-    <div class="mb-8 text-center"><svg width="60" height="60" viewBox="0 0 100 100" class="mx-auto mb-4">
-            <circle cx="50" cy="50" r="48" fill="#00B2A9" />
-            <path d="M30 70V30H40V60H65V70H30Z" fill="#fff" />
-            <rect x="55" y="30" width="15" height="15" rx="2" fill="#F26522" />
+<body>
+
+    <div class="center logo">
+        <svg width=60 height=60 viewBox="0 0 100 100">
+            <circle cx=50 cy=50 r=48 fill=#00B2A9></circle>
+            <path d="M30 70V30H40V60H65V70H30Z" fill=#fff></path>
+            <rect x=55 y=30 width=15 height=15 rx=2 fill=#F26522></rect>
         </svg>
-        <h1 class="text-2xl font-bold text-gray-800">Library For All</h1>
-        <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold">Knowledge is for everyone</p>
+        <h1>Library For All</h1>
+        <div class=subtitle>Knowledge is for everyone</div>
     </div>
-    <div class="w-full max-w-md bg-white rounded-2xl shadow-xl border overflow-hidden">
-        <div class="h-2 bg-lfa-orange"></div>
-        <div class="p-8">
-            <h2 class="text-xl font-bold text-center mb-6">Sign in to your account</h2>
-            <form id="loginForm" class="space-y-5"><input id="email" type="email" required placeholder="you@example.com"
-                    class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-lfa-teal outline-none"><input
-                    id="password" type="password" required placeholder="••••••••"
-                    class="w-full px-4 py-3 rounded-xl border focus:ring-2 focus:ring-lfa-teal outline-none"><label
-                    class="flex items-center text-sm text-gray-600"><input type="checkbox" class="mr-2">Remember this
-                    device</label><button
-                    class="w-full bg-lfa-teal text-white font-bold py-3.5 rounded-xl hover-lfa-teal">Sign In</button>
+
+    <div class=card>
+        <div class=topbar></div>
+        <div class=form>
+            <h2>Sign in to your account</h2>
+            <form id=loginForm>
+                <input class=input type=email required placeholder="you@example.com">
+                <input class=input type=password required placeholder="••••••••">
+                <div class=row><input type=checkbox style="margin-right:8px">Remember this device</div>
+                <button class=btn>Sign In</button>
             </form>
         </div>
     </div>
-    <footer class="mt-12 text-xs text-gray-400 text-center">&copy; 2024 Library For All</footer>
-    <script>document.getElementById("loginForm").onsubmit = e => { e.preventDefault(); let b = e.target.querySelector("button"); b.innerText = "Signing in..."; b.disabled = 1; setTimeout(() => { b.innerText = "Sign In"; b.disabled = 0 }, 1e3) }</script>
+
+    <footer>&copy; 2024 Library For All</footer>
+
+    <script>
+        loginForm.onsubmit = e => { e.preventDefault(); let b = e.target.querySelector("button"); b.textContent = "Signing in..."; b.disabled = 1; setTimeout(() => { b.textContent = "Sign In"; b.disabled = 0 }, 1e3) }
+    </script>
+
 </body>
 
 </html>
