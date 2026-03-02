@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avid | Professional Creative Tools Shop</title>
+    <!-- Using Tailwind for modern layout while mimicking Avid's design system -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        :root {
+            --avid-purple: #4c2c92;
+            --avid-dark: #111111;
+            --avid-gray: #f4f4f4;
+            --avid-blue: #0066cc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: var(--avid-dark);
+        }
+
+        .avid-gradient {
+            background: linear-gradient(135deg, #4c2c92 0%, #2d1a56 100%);
+        }
+
+        .product-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .avid-button-primary {
+            background-color: var(--avid-purple);
+            color: white;
+            transition: background-color 0.2s;
+        }
+
+        .avid-button-primary:hover {
+            background-color: #3b2272;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--avid-purple);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Mocking the loader from the original file */
+        #avidLoader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .spinner div {
+            width: 6px;
+            height: 20px;
+            background-color: var(--avid-purple);
+            display: inline-block;
+            margin: 2px;
+            animation: stretch 1.2s infinite ease-in-out;
+        }
+
+        .spinner .rect2 {
+            animation-delay: -1.1s;
+        }
+
+        .spinner .rect3 {
+            animation-delay: -1.0s;
+        }
+
+        .spinner .rect4 {
+            animation-delay: -0.9s;
+        }
+
+        .spinner .rect5 {
+            animation-delay: -0.8s;
+        }
+
+        @keyframes stretch {
+
+            0%,
+            40%,
+            100% {
+                transform: scaleY(0.4);
+            }
+
+            20% {
+                transform: scaleY(1.0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Loader -->
+    <div id="avidLoader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+
+    <!-- Firecompass POC Banner -->
+    <div
+        style="background-color: #1a1a1a; color: white; text-align: center; padding: 12px 0; font-weight: bold; font-size: 1.1em; letter-spacing: 1px;">
+        FIRECOMPASS POC
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#">
+                        <img src="https://cdn.avid.com/avidcom/images/shared/avid-logo-desktop.svg" alt="Avid Logo"
+                            height="40" />
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link text-sm font-semibold uppercase tracking-wider">Audio</a>
+                    <a href="#" class="nav-link text-sm font-semibold uppercase tracking-wider">Video</a>
+                    <a href="#" class="nav-link text-sm font-semibold uppercase tracking-wider">Storage</a>
+                    <a href="#" class="nav-link text-sm font-semibold uppercase tracking-wider text-purple-700">Special
+                        Offers</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center space-x-5">
+                    <button class="text-gray-600 hover:text-purple-700 transition">
+                        <i class="fas fa-search text-lg"></i>
+                    </button>
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-purple-700 transition flex items-center">
+                            <i class="fas fa-shopping-cart text-lg"></i>
+                            <span id="cart-count"
+                                class="absolute -top-2 -right-2 bg-purple-700 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">0</span>
+                        </button>
+                    </div>
+                    <a href="/account/login"
+                        class="hidden sm:block text-sm font-semibold text-gray-700 hover:text-purple-700 border border-gray-300 px-4 py-2 rounded-sm transition">
+                        Sign In
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="avid-gradient text-white py-16 px-4">
+            <div class="max-w-7xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">The Future of Creativity.</h1>
+                <p class="text-xl md:text-2xl mb-8 text-purple-100 max-w-2xl mx-auto">
+                    Welcome back! Sign in to unlock your <span
+                        class="font-bold underline decoration-yellow-400">exclusive 80% discount</span> on all
+                    subscriptions.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button
+                        class="bg-white text-purple-900 px-8 py-4 rounded-sm font-bold hover:bg-gray-100 transition">Shop
+                        Pro Tools</button>
+                    <button
+                        class="border-2 border-white text-white px-8 py-4 rounded-sm font-bold hover:bg-white hover:text-purple-900 transition">Explore
+                        Media Composer</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Filter & Grid -->
+        <section class="max-w-7xl mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Featured Products</h2>
+                    <p class="text-gray-500">Standard tools for professional audio and video creators.</p>
+                </div>
+                <div class="flex space-x-2">
+                    <button class="px-4 py-2 bg-purple-700 text-white text-sm rounded-sm">All</button>
+                    <button
+                        class="px-4 py-2 bg-white border text-gray-700 text-sm rounded-sm hover:border-purple-700 transition">Audio</button>
+                    <button
+                        class="px-4 py-2 bg-white border text-gray-700 text-sm rounded-sm hover:border-purple-700 transition">Video</button>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card bg-white border rounded-sm overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center p-8">
+                        <i class="fas fa-compact-disc text-6xl text-purple-800"></i>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <span
+                            class="text-[10px] uppercase font-bold text-purple-700 tracking-widest">Subscription</span>
+                        <h3 class="text-xl font-bold mt-1">Pro Tools Ultimate</h3>
+                        <p class="text-gray-600 text-sm mt-2 line-clamp-2">The industry standard for music production,
+                            film scoring, and post production.</p>
+                        <div class="mt-4 flex items-baseline gap-2">
+                            <span class="text-2xl font-bold">$599.00</span>
+                            <span class="text-sm text-gray-400 line-through">$749.00</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="addToCart('Pro Tools Ultimate')"
+                            class="avid-button-primary w-full py-3 font-bold uppercase text-xs tracking-widest rounded-sm">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white border rounded-sm overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center p-8">
+                        <i class="fas fa-video text-6xl text-blue-600"></i>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-blue-600 tracking-widest">Subscription</span>
+                        <h3 class="text-xl font-bold mt-1">Media Composer</h3>
+                        <p class="text-gray-600 text-sm mt-2 line-clamp-2">Advanced video editing software for
+                            professional film and TV workflows.</p>
+                        <div class="mt-4 flex items-baseline gap-2">
+                            <span class="text-2xl font-bold">$239.00</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="addToCart('Media Composer')"
+                            class="avid-button-primary w-full py-3 font-bold uppercase text-xs tracking-widest rounded-sm">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white border rounded-sm overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center p-8">
+                        <i class="fas fa-music text-6xl text-purple-800"></i>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-purple-700 tracking-widest">Perpetual
+                            License</span>
+                        <h3 class="text-xl font-bold mt-1">Sibelius Ultimate</h3>
+                        <p class="text-gray-600 text-sm mt-2 line-clamp-2">The world's best-selling music notation
+                            software for composers and arrangers.</p>
+                        <div class="mt-4 flex items-baseline gap-2">
+                            <span class="text-2xl font-bold">$199.00</span>
+                            <span class="text-xs text-green-600 font-bold uppercase">Back in stock</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="addToCart('Sibelius Ultimate')"
+                            class="avid-button-primary w-full py-3 font-bold uppercase text-xs tracking-widest rounded-sm">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card bg-white border rounded-sm overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center p-8">
+                        <i class="fas fa-microchip text-6xl text-gray-800"></i>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <span class="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Hardware</span>
+                        <h3 class="text-xl font-bold mt-1">MBOX Studio</h3>
+                        <p class="text-gray-600 text-sm mt-2 line-clamp-2">Powerful USB audio interface for recording,
+                            mixing, and podcasting.</p>
+                        <div class="mt-4 flex items-baseline gap-2">
+                            <span class="text-2xl font-bold">$899.00</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="addToCart('MBOX Studio')"
+                            class="avid-button-primary w-full py-3 font-bold uppercase text-xs tracking-widest rounded-sm">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secondary Banner -->
+        <section class="bg-gray-100 py-20 border-y">
+            <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 italic">Empowering the world’s most celebrated storytellers.</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">From Hollywood blockbusters to chart-topping hits,
+                        Avid solutions are at the core of the industry's most creative workflows. Join the community of
+                        professionals today.</p>
+                    <a href="#" class="text-purple-700 font-bold flex items-center group">
+                        Learn about our Solutions
+                        <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all"></i>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white p-6 shadow-sm rounded-sm text-center">
+                        <span class="block text-3xl font-bold text-purple-700">1M+</span>
+                        <span class="text-xs uppercase text-gray-500 font-semibold">Users</span>
+                    </div>
+                    <div class="bg-white p-6 shadow-sm rounded-sm text-center">
+                        <span class="block text-3xl font-bold text-purple-700">95%</span>
+                        <span class="text-xs uppercase text-gray-500 font-semibold">Pro Studios</span>
+                    </div>
+                    <div class="bg-white p-6 shadow-sm rounded-sm text-center">
+                        <span class="block text-3xl font-bold text-purple-700">24/7</span>
+                        <span class="text-xs uppercase text-gray-500 font-semibold">Expert Support</span>
+                    </div>
+                    <div class="bg-white p-6 shadow-sm rounded-sm text-center">
+                        <span class="block text-3xl font-bold text-purple-700">Cloud</span>
+                        <span class="text-xs uppercase text-gray-500 font-semibold">Collaboration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 text-gray-400 py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-zinc-800 pb-12">
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Products</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Pro Tools</a></li>
+                        <li><a href="#" class="hover:text-white transition">Media Composer</a></li>
+                        <li><a href="#" class="hover:text-white transition">Sibelius</a></li>
+                        <li><a href="#" class="hover:text-white transition">Avid NEXIS</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Solutions</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Music Creation</a></li>
+                        <li><a href="#" class="hover:text-white transition">Video Post Production</a></li>
+                        <li><a href="#" class="hover:text-white transition">News Broadcasting</a></li>
+                        <li><a href="#" class="hover:text-white transition">Live Sound</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Company</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-white transition">About Avid</a></li>
+                        <li><a href="#" class="hover:text-white transition">Press Room</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition">Developers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Stay Connected</h4>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="hover:text-white transition text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-white transition text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-white transition text-xl"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="hover:text-white transition text-xl"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <p class="text-xs leading-relaxed">Sign up for our newsletter to receive the latest product updates
+                        and tutorials.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs space-y-4 md:space-y-0">
+                <p>&copy; 2026 Avid Technology, Inc. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition">Terms & Legal</a>
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Cookie Preferences</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Toast (UI only) -->
+    <div id="cart-toast"
+        class="fixed bottom-10 right-10 bg-black text-white px-6 py-4 rounded-sm shadow-2xl transform translate-y-32 transition-transform duration-300 flex items-center space-x-4 z-[100]">
+        <i class="fas fa-check-circle text-green-400"></i>
+        <span>Item added to your cart.</span>
+    </div>
+
+    <script>
+        // Simulate the Avid Loader
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('avidLoader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
+            }, 800);
+        });
+
+        // Simple Cart Logic
+        let cartItems = 0;
+        const cartCountEl = document.getElementById('cart-count');
+        const toast = document.getElementById('cart-toast');
+
+        function addToCart(productName) {
+            cartItems++;
+            cartCountEl.innerText = cartItems;
+
+            // Show toast
+            toast.classList.remove('translate-y-32');
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-32');
+            }, 3000);
+
+            console.log(`Added to cart: ${productName}`);
+        }
+    </script>
+</body>
+
+</html>
