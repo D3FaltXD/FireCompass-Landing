@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin Login</title>
+	<style>
+		:root {
+			--page-bg: #020516;
+			--panel-bg: #0b1020;
+			--field-bg: #101628;
+			--field-border: rgba(255, 255, 255, 0.14);
+			--field-text: rgba(255, 255, 255, 0.88);
+			--placeholder: rgba(212, 218, 236, 0.58);
+			--title: #ffffff;
+			--button-start: #0f45c8;
+			--button-end: #1764ff;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html, body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+		}
+
+		body {
+			overflow: hidden;
+			background:
+				linear-gradient(to bottom, #4b3529 0, #4b3529 10px, var(--page-bg) 10px, var(--page-bg) 100%);
+			font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			color: var(--title);
+		}
+
+		.page {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			min-height: 100vh;
+		}
+
+		.back-link {
+			position: absolute;
+			top: 38px;
+			left: 54px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 28px;
+			height: 28px;
+			color: rgba(255, 255, 255, 0.96);
+			text-decoration: none;
+		}
+
+		.back-link svg {
+			width: 26px;
+			height: 26px;
+			display: block;
+		}
+
+		.login-card {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -44%);
+			width: min(100%, 780px);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		h1 {
+			margin: 0 0 44px;
+			font-size: 24px;
+			line-height: 1.2;
+			font-weight: 700;
+			letter-spacing: 0;
+			color: var(--title);
+			text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+		}
+
+		form {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.field {
+			width: min(100%, 474px);
+			height: 64px;
+			margin: 0 0 16px;
+			padding: 0 32px;
+			border: 1px solid var(--field-border);
+			border-radius: 999px;
+			background: rgba(17, 22, 38, 0.96);
+			color: var(--field-text);
+			font-size: 18px;
+			font-weight: 600;
+			outline: none;
+			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+		}
+
+		.field::placeholder {
+			color: var(--placeholder);
+			opacity: 1;
+			font-weight: 600;
+		}
+
+		.field:focus {
+			border-color: rgba(96, 150, 255, 0.45);
+			box-shadow: 0 0 0 3px rgba(30, 103, 255, 0.1);
+		}
+
+		.submit {
+			margin-top: 12px;
+			width: 117px;
+			height: 54px;
+			border: none;
+			border-radius: 999px;
+			background: linear-gradient(180deg, var(--button-start), var(--button-end));
+			color: #ffffff;
+			font-size: 16px;
+			font-weight: 700;
+			letter-spacing: 0;
+			cursor: pointer;
+			box-shadow: 0 12px 24px rgba(16, 84, 224, 0.28);
+		}
+
+		.submit:active {
+			transform: translateY(1px);
+		}
+
+		@media (max-width: 700px) {
+			.back-link {
+				top: 24px;
+				left: 24px;
+			}
+
+			.login-card {
+				width: calc(100% - 48px);
+				transform: translate(-50%, -40%);
+			}
+
+			h1 {
+				font-size: 22px;
+				margin-bottom: 32px;
+			}
+
+			.field {
+				width: 100%;
+				height: 58px;
+				padding: 0 24px;
+				font-size: 16px;
+			}
+
+			.submit {
+				width: 112px;
+				height: 50px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main class="page">
+		<a class="back-link" href="#" aria-label="Back">
+			<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M15 18l-6-6 6-6"></path>
+			</svg>
+		</a>
+
+		<section class="login-card" aria-label="Admin Login">
+			<h1>Admin Login</h1>
+
+			<form>
+				<input class="field" type="email" name="email" placeholder="Your Email" aria-label="Your Email">
+				<input class="field" type="password" name="password" placeholder="Your Password" aria-label="Your Password">
+				<button class="submit" type="submit">Log In</button>
+			</form>
+		</section>
+	</main>
+</body>
+</html>
